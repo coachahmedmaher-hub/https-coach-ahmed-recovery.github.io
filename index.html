@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>كابتن أحمد ماهر | الاستشفاء الرياضي والحجامة</title>
+<meta name="description" content="جلسات مساج رياضي وحجامة منزلية برايفت في الإمارات مع كابتن أحمد ماهر. Sports massage & cupping home sessions in the UAE.">
+<meta property="og:title" content="كابتن أحمد ماهر | Coach Ahmed Maher">
+<meta property="og:description" content="مساج رياضي وحجامة · Sports massage & cupping · Private home sessions">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#111315">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Readex+Pro:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#111315;
+  --surface:#1B1E21;
+  --line:#2A2E32;
+  --chip:#3A3F44;
+  --text:#F4F4EF;
+  --text-2:#E6E8E3;
+  --muted:#B4B9B5;
+  --muted-2:#A3A8A4;
+  --accent:#D9FF4A;
+  --on-accent:#111315;
+  --on-accent-2:#2C3108;
+  --warn:#FFB547;
+  --warn-bg:#2A2112;
+  --display:'Readex Pro','IBM Plex Sans Arabic',sans-serif;
+  --body:'IBM Plex Sans Arabic','Readex Pro',sans-serif;
+}
+html[lang="hi"]{--display:'Noto Sans Devanagari','Readex Pro',sans-serif;--body:'Noto Sans Devanagari',sans-serif}
+html[lang="ur"]{--display:'Noto Naskh Arabic',serif;--body:'Noto Naskh Arabic',serif}
+html[lang="en"]{--display:'Readex Pro',sans-serif;--body:'Readex Pro',sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.5}
+a{color:inherit}
+.wrap{max-width:680px;margin:0 auto;padding:20px 16px 120px}
+@media (min-width:600px){.wrap{padding:28px 32px 120px}}
+
+.topbar{display:flex;justify-content:flex-end;margin-bottom:24px}
+.lang{position:relative}
+.lang-btn{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid var(--chip);background:var(--surface);color:var(--accent);cursor:pointer;padding:0}
+.lang-btn svg{width:22px;height:22px}
+.lang-btn[aria-expanded="true"]{border-color:var(--accent)}
+.langs{position:absolute;top:52px;inset-inline-end:0;z-index:10;min-width:170px;margin:0;padding:6px;list-style:none;background:var(--surface);border:1px solid var(--chip);border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.5)}
+.langs[hidden]{display:none}
+.langs button{width:100%;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 14px;border:0;border-radius:10px;background:transparent;color:var(--text-2);font-size:16px;font-weight:500;cursor:pointer;text-align:start}
+.langs button:hover{background:#24282C}
+.langs button[lang="ar"],.langs button[lang="ur"]{font-family:'IBM Plex Sans Arabic',sans-serif}
+.langs button[lang="en"]{font-family:'Readex Pro',sans-serif}
+.langs button[lang="hi"]{font-family:'Noto Sans Devanagari',sans-serif}
+.langs button[aria-pressed="true"]{color:var(--accent);font-weight:600}
+.langs button[aria-pressed="true"]::after{content:"✓";font-family:'Readex Pro',sans-serif}
+
+header{display:flex;flex-direction:column;gap:10px;margin-bottom:44px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:600;font-size:20px}
+.pill{font-size:14px;font-weight:500;color:var(--on-accent);background:var(--accent);padding:6px 14px;border-radius:999px}
+.bar{width:64px;height:5px;background:var(--accent);border-radius:3px;margin-top:20px}
+h1{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(38px,10vw,60px);line-height:1.2}
+.sub{color:var(--muted);font-size:18px}
+
+section{margin-bottom:40px}
+h2{margin:0 0 6px;font-family:var(--display);font-weight:600;font-size:28px;color:var(--accent)}
+.lead{color:var(--muted);font-size:16px;margin:0 0 14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;padding:0;list-style:none}
+.chips li{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--text-2);border:1px solid var(--chip);border-radius:999px;padding:6px 14px}
+.chips svg{width:20px;height:20px;flex-shrink:0;color:var(--accent)}
+
+.rows{border-top:1px solid var(--line)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.row .info{display:flex;flex-direction:column;gap:2px;min-width:0}
+.row .name{font-family:var(--display);font-weight:600;font-size:22px}
+.row .desc{color:var(--text-2);font-size:16px}
+.row .meta{color:var(--muted-2);font-size:14px}
+.row .side{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0}
+.price{display:flex;align-items:baseline;gap:6px}
+.price b{font-family:'Readex Pro',sans-serif;font-weight:700;font-size:36px;color:var(--accent);line-height:1}
+.price span{font-size:14px;color:var(--muted-2)}
+.book{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;font-size:14px;font-weight:600;text-decoration:none;color:var(--accent);border:1px solid var(--accent);border-radius:999px}
+.book:hover{background:var(--accent);color:var(--on-accent)}
+
+.alert{display:flex;align-items:flex-start;gap:12px;margin:0 0 40px;padding:16px 18px;border-radius:16px;background:var(--warn-bg);border:1px solid var(--warn);color:var(--text)}
+.alert svg{width:26px;height:26px;flex-shrink:0;color:var(--warn);margin-top:1px}
+.alert strong{display:block;color:var(--warn);font-family:var(--display);font-weight:600;font-size:16px}
+.alert p{margin:2px 0 0;font-size:16px}
+
+.packs-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.packs-head .lead{margin:0}
+.packs{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:560px){.packs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.pack{border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:6px}
+.pack.outline{border:2px solid var(--accent);background:var(--surface)}
+.pack.filled{background:var(--accent);color:var(--on-accent)}
+.badge{align-self:flex-start;font-size:13px;font-weight:600;border-radius:999px;padding:4px 12px}
+.outline .badge{color:var(--accent);border:1px solid var(--accent)}
+.filled .badge{color:var(--accent);background:var(--on-accent)}
+.pack .pname{font-family:var(--display);font-weight:600;font-size:22px;margin-top:6px}
+.pack .pprice{display:flex;align-items:baseline;gap:8px}
+.pack .pprice b{font-family:'Readex Pro',sans-serif;font-weight:700;font-size:44px;line-height:1.1}
+.outline .pprice b{color:var(--accent)}
+.pack .pprice span,.pack .pprice s{font-size:15px}
+.outline .pprice span{color:var(--muted-2)}
+.outline .pprice s{color:#8A8F8B}
+.filled .pprice span,.filled .valid{color:var(--on-accent-2)}
+.filled .pprice s{color:#3D4410}
+.pack .valid{font-size:14px;color:var(--muted)}
+.pack .book{margin-top:10px;align-self:stretch}
+.filled .book{color:var(--on-accent);border-color:var(--on-accent)}
+.filled .book:hover{background:var(--on-accent);color:var(--accent)}
+
+footer{border-top:1px solid var(--line);padding-top:24px;display:flex;flex-wrap:wrap;gap:16px 28px;justify-content:space-between}
+footer a{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;font-family:'Readex Pro',sans-serif;font-weight:600;font-size:18px}
+footer svg{width:26px;height:26px;color:var(--accent);flex-shrink:0}
+
+.cta{position:fixed;inset-inline:16px;bottom:16px;max-width:648px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:700;font-size:18px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.cta svg{width:24px;height:24px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<div class="topbar">
+  <div class="lang">
+    <button type="button" class="lang-btn" aria-label="Language / اللغة" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+    </button>
+    <ul class="langs" id="langMenu" hidden>
+      <li><button type="button" lang="ar" data-set="ar" aria-pressed="true">العربية</button></li>
+      <li><button type="button" lang="en" data-set="en" aria-pressed="false">English</button></li>
+      <li><button type="button" lang="hi" data-set="hi" aria-pressed="false">हिन्दी</button></li>
+      <li><button type="button" lang="ur" data-set="ur" aria-pressed="false">اردو</button></li>
+    </ul>
+  </div>
+</div>
+
+<header>
+  <div class="top">
+    <div class="brand" data-i="brand">كابتن أحمد ماهر</div>
+    <div class="pill" data-i="pill">جلسات منزلية برايفت</div>
+  </div>
+  <div class="bar"></div>
+  <h1 data-i="title">الاستشفاء الرياضي</h1>
+  <div class="sub" data-i="sub">مساج رياضي وحجامة · خبرة منذ 2017</div>
+</header>
+
+<section aria-labelledby="sports">
+  <h2 id="sports" data-i="sportsH">الجلسات الرياضية</h2>
+  <p class="lead" data-i="sportsLead">كل جلسة شاملة جميع الأدوات:</p>
+  <ul class="chips">
+    <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.5 4.6 6 8 6 11a6 6 0 0 1-12 0c0-3 2.5-6.4 6-11z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg><span data-i="tOil">مساج بالزيوت</span></li>
+    <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13c4-5 10-8 17-8.5l1 2.5c-6 1.5-11 4.5-15 8.5z"/><path d="M4 19.5h3.5"/><path d="M10 19.5h3.5"/><path d="M16 19.5h3.5"/></svg><span data-i="tIastm">أدوات IASTM</span></li>
+    <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h10a3 3 0 0 1 0 6H6z"/><path d="M6 7.5H3v3h3"/><path d="M11 12v8h3.5v-8"/></svg><span data-i="tGun">مسدسات المساج</span></li>
+    <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c0-6 2.5-10 6-10s6 4 6 10"/><path d="M4 20h16"/><path d="M12 2.5c1.2 1.4 1.8 2.4 1.8 3.4a1.8 1.8 0 0 1-3.6 0c0-1 .6-2 1.8-3.4z"/></svg><span data-i="tFire">حجامة نارية</span></li>
+    <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 14c0-4.5 2.2-8 5-8s5 3.5 5 8"/><path d="M5 14h14"/><path d="M4 19.5h16"/><path d="M6.5 17 4 19.5 6.5 22"/><path d="M17.5 17 20 19.5 17.5 22"/></svg><span data-i="tSlide">حجامة متزحلقة</span></li>
+    <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5v5a7 7 0 0 0 14 0V5"/><path d="M3.5 5h3"/><path d="M17.5 5h3"/><path d="M9 15.5l-.5 2"/><path d="M15 15.5l.5 2"/></svg><span data-i="tBreo">جهاز الرقبة Breo</span></li>
+  </ul>
+  <div class="rows">
+    <div class="row">
+      <div class="info">
+        <div class="name" data-i="s1">جلسة مركزة</div>
+        <div class="desc" data-i="s1d">Upper Body أو Lower Body</div>
+        <div class="meta" data-i="s1m">نصف الجسم كاملًا، وليست عضلة واحدة · لا تقل عن 60 دقيقة</div>
+      </div>
+      <div class="side">
+        <div class="price"><b>200</b><span data-i="aed">درهم</span></div>
+        <a class="book" href="https://wa.me/971562723518" data-wa="s1" data-price="200" data-i="book">احجز</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="info">
+        <div class="name" data-i="s2">جلسة كاملة</div>
+        <div class="desc" data-i="s2d">الجسم كله</div>
+        <div class="meta" data-i="m90">لا تقل عن 90 دقيقة</div>
+      </div>
+      <div class="side">
+        <div class="price"><b>300</b><span data-i="aed">درهم</span></div>
+        <a class="book" href="https://wa.me/971562723518" data-wa="s2" data-price="300" data-i="book">احجز</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="info">
+        <div class="name" data-i="s3">جلسة استشفاء عميق</div>
+        <div class="desc" data-i="s3d">للرياضيين، وبعد البطولات والمجهود العالي</div>
+        <div class="meta" data-i="m120">لا تقل عن 120 دقيقة</div>
+      </div>
+      <div class="side">
+        <div class="price"><b>400</b><span data-i="aed">درهم</span></div>
+        <a class="book" href="https://wa.me/971562723518" data-wa="s3" data-price="400" data-i="book">احجز</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="wet">
+  <h2 id="wet" data-i="wetH">الحجامة الرطبة</h2>
+  <p class="lead" data-i="wetLead">شاملة تدليك استرخائي وحجامة متزحلقة لمدة 20 دقيقة</p>
+  <ul class="chips">
+    <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14c0-5 2.5-9 6-9s6 4 6 9"/><path d="M4 14h16"/><path d="M12 16.5c1.2 1.5 1.8 2.5 1.8 3.4a1.8 1.8 0 0 1-3.6 0c0-.9.6-1.9 1.8-3.4z"/></svg><span data-i="tWet">حجامة رطبة</span></li>
+    <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg><span data-i="tRelax">تدليك استرخائي</span></li>
+    <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 14c0-4.5 2.2-8 5-8s5 3.5 5 8"/><path d="M5 14h14"/><path d="M4 19.5h16"/><path d="M6.5 17 4 19.5 6.5 22"/><path d="M17.5 17 20 19.5 17.5 22"/></svg><span data-i="tSlide">حجامة متزحلقة</span></li>
+  </ul>
+  <div class="rows">
+    <div class="row">
+      <div class="info">
+        <div class="name" data-i="w1">أساسية · لحد 9 كاسات</div>
+        <div class="meta" data-i="m40">لا تقل عن 40 دقيقة</div>
+      </div>
+      <div class="side">
+        <div class="price"><b>230</b><span data-i="aed">درهم</span></div>
+        <a class="book" href="https://wa.me/971562723518" data-wa="w1" data-price="230" data-i="book">احجز</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="info">
+        <div class="name" data-i="w2">شاملة · لحد 15 كاسة</div>
+        <div class="meta" data-i="m60">لا تقل عن 60 دقيقة</div>
+      </div>
+      <div class="side">
+        <div class="price"><b>300</b><span data-i="aed">درهم</span></div>
+        <a class="book" href="https://wa.me/971562723518" data-wa="w2" data-price="300" data-i="book">احجز</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="alert" role="note">
+  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>
+  <div>
+    <strong data-i="alertT">تنبيه</strong>
+    <p data-i="alert">الأسعار غير شاملة مواصلات التنقل، وتختلف حسب المسافة.</p>
+  </div>
+</div>
+
+<section aria-labelledby="packs">
+  <div class="packs-head">
+    <h2 id="packs" data-i="packsH">الباقات</h2>
+    <p class="lead" data-i="packsLead">جلسات كاملة بسعر أوفر</p>
+  </div>
+  <div class="packs">
+    <div class="pack outline">
+      <div class="badge" data-i="p1b">وفّر 100 درهم</div>
+      <div class="pname" data-i="p1">4 جلسات كاملة</div>
+      <div class="pprice"><b>1100</b><span data-i="aed">درهم</span><s>1200</s></div>
+      <div class="valid" data-i="p1v">صلاحية 6 أسابيع من أول جلسة</div>
+      <a class="book" href="https://wa.me/971562723518" data-wa="p1" data-price="1100" data-i="sub2">اشترك في الباقة</a>
+    </div>
+    <div class="pack filled">
+      <div class="badge" data-i="p2b">الأكثر توفيرًا · وفّر 300 درهم</div>
+      <div class="pname" data-i="p2">8 جلسات كاملة</div>
+      <div class="pprice"><b>2100</b><span data-i="aed">درهم</span><s>2400</s></div>
+      <div class="valid" data-i="p2v">صلاحية 12 أسبوعًا من أول جلسة</div>
+      <a class="book" href="https://wa.me/971562723518" data-wa="p2" data-price="2100" data-i="sub2">اشترك في الباقة</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="https://wa.me/971562723518" data-wa="ask">
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8.2 19z"/><path d="M9.5 9.5c0 2.5 2 4.5 4.5 5l1-1.2 1.8.9-.6 1.6c-3.6 0-7.4-3.3-7.4-7.3l1.6-.6.9 1.8z"/></svg>
+    <span dir="ltr">056 272 3518</span>
+  </a>
+  <a href="https://instagram.com/coach.ahmed.maher" target="_blank" rel="noopener">
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+    <span dir="ltr">@coach.ahmed.maher</span>
+  </a>
+</footer>
+
+</main>
+
+<a class="cta" href="https://wa.me/971562723518" data-wa="ask">
+  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8.2 19z"/></svg>
+  <span data-i="cta">احجز على الواتساب</span>
+</a>
+
+<script>
+(function(){
+var PHONE = '971562723518';
+var T = {
+ar:{dir:'rtl',doc:'كابتن أحمد ماهر | الاستشفاء الرياضي والحجامة',
+brand:'كابتن أحمد ماهر',pill:'جلسات منزلية برايفت',title:'الاستشفاء الرياضي',sub:'مساج رياضي وحجامة · خبرة منذ 2017',
+sportsH:'الجلسات الرياضية',sportsLead:'كل جلسة شاملة جميع الأدوات:',
+tOil:'مساج بالزيوت',tIastm:'أدوات IASTM',tGun:'مسدسات المساج',tFire:'حجامة نارية',tSlide:'حجامة متزحلقة',tBreo:'جهاز الرقبة Breo',
+s1:'جلسة مركزة',s1d:'Upper Body أو Lower Body',s1m:'نصف الجسم كاملًا، وليست عضلة واحدة · لا تقل عن 60 دقيقة',
+s2:'جلسة كاملة',s2d:'الجسم كله',m90:'لا تقل عن 90 دقيقة',
+s3:'جلسة استشفاء عميق',s3d:'للرياضيين، وبعد البطولات والمجهود العالي',m120:'لا تقل عن 120 دقيقة',
+aed:'درهم',book:'احجز',
+wetH:'الحجامة الرطبة',wetLead:'شاملة تدليك استرخائي وحجامة متزحلقة لمدة 20 دقيقة',tWet:'حجامة رطبة',tRelax:'تدليك استرخائي',
+w1:'أساسية · لحد 9 كاسات',m40:'لا تقل عن 40 دقيقة',w2:'شاملة · لحد 15 كاسة',m60:'لا تقل عن 60 دقيقة',
+alertT:'تنبيه',alert:'الأسعار غير شاملة مواصلات التنقل، وتختلف حسب المسافة.',
+packsH:'الباقات',packsLead:'جلسات كاملة بسعر أوفر',
+p1b:'وفّر 100 درهم',p1:'4 جلسات كاملة',p1v:'صلاحية 6 أسابيع من أول جلسة',
+p2b:'الأكثر توفيرًا · وفّر 300 درهم',p2:'8 جلسات كاملة',p2v:'صلاحية 12 أسبوعًا من أول جلسة',
+sub2:'اشترك في الباقة',cta:'احجز على الواتساب'},
+en:{dir:'ltr',doc:'Coach Ahmed Maher | Sports Recovery & Cupping',
+brand:'Coach Ahmed Maher',pill:'Private home sessions',title:'Sports Recovery',sub:'Sports massage & cupping · Experience since 2017',
+sportsH:'Sports Sessions',sportsLead:'Every session includes all tools:',
+tOil:'Oil massage',tIastm:'IASTM tools',tGun:'Massage guns',tFire:'Fire cupping',tSlide:'Sliding cupping',tBreo:'Breo neck massager',
+s1:'Focused Session',s1d:'Upper Body or Lower Body',s1m:'The whole half of the body, not a single muscle · At least 60 min',
+s2:'Full Body Session',s2d:'Whole body',m90:'At least 90 min',
+s3:'Deep Recovery Session',s3d:'For athletes, after competitions and intense training',m120:'At least 120 min',
+aed:'AED',book:'Book',
+wetH:'Wet Cupping (Hijama)',wetLead:'Includes 20 min of relaxing massage and sliding cupping',tWet:'Wet cupping',tRelax:'Relaxing massage',
+w1:'Basic · Up to 9 cups',m40:'At least 40 min',w2:'Complete · Up to 15 cups',m60:'At least 60 min',
+alertT:'Please note',alert:'Prices do not include transportation, which varies by distance.',
+packsH:'Packages',packsLead:'Full sessions at a better price',
+p1b:'Save 100 AED',p1:'4 Full Sessions',p1v:'Valid for 6 weeks from the first session',
+p2b:'Best value · Save 300 AED',p2:'8 Full Sessions',p2v:'Valid for 12 weeks from the first session',
+sub2:'Get this package',cta:'Book on WhatsApp'},
+hi:{dir:'ltr',doc:'कोच अहमद माहेर | स्पोर्ट्स रिकवरी और कपिंग',
+brand:'कोच अहमद माहेर',pill:'प्राइवेट होम सेशन',title:'स्पोर्ट्स रिकवरी',sub:'स्पोर्ट्स मसाज और कपिंग (हिजामा) · 2017 से अनुभव',
+sportsH:'स्पोर्ट्स सेशन',sportsLead:'हर सेशन में सभी टूल्स शामिल हैं:',
+tOil:'ऑयल मसाज',tIastm:'IASTM टूल्स',tGun:'मसाज गन',tFire:'फायर कपिंग',tSlide:'स्लाइडिंग कपिंग',tBreo:'Breo नेक मसाजर',
+s1:'फोकस्ड सेशन',s1d:'अपर बॉडी या लोअर बॉडी',s1m:'पूरा आधा शरीर, सिर्फ एक मांसपेशी नहीं · कम से कम 60 मिनट',
+s2:'फुल बॉडी सेशन',s2d:'पूरा शरीर',m90:'कम से कम 90 मिनट',
+s3:'डीप रिकवरी सेशन',s3d:'एथलीटों के लिए, प्रतियोगिता और भारी ट्रेनिंग के बाद',m120:'कम से कम 120 मिनट',
+aed:'दिरहम',book:'बुक करें',
+wetH:'वेट कपिंग (हिजामा)',wetLead:'20 मिनट की रिलैक्सिंग मसाज और स्लाइडिंग कपिंग शामिल',tWet:'वेट कपिंग',tRelax:'रिलैक्सिंग मसाज',
+w1:'बेसिक · 9 कप तक',m40:'कम से कम 40 मिनट',w2:'कम्प्लीट · 15 कप तक',m60:'कम से कम 60 मिनट',
+alertT:'ध्यान दें',alert:'कीमतों में आने-जाने का खर्च शामिल नहीं है, यह दूरी के अनुसार अलग होता है।',
+packsH:'पैकेज',packsLead:'बेहतर कीमत पर फुल सेशन',
+p1b:'100 दिरहम बचाएं',p1:'4 फुल सेशन',p1v:'पहले सेशन से 6 हफ्ते तक मान्य',
+p2b:'सबसे ज़्यादा बचत · 300 दिरहम बचाएं',p2:'8 फुल सेशन',p2v:'पहले सेशन से 12 हफ्ते तक मान्य',
+sub2:'पैकेज लें',cta:'WhatsApp पर बुक करें'},
+ur:{dir:'rtl',doc:'کوچ احمد ماہر | اسپورٹس ریکوری اور حجامہ',
+brand:'کوچ احمد ماہر',pill:'پرائیویٹ ہوم سیشن',title:'اسپورٹس ریکوری',sub:'اسپورٹس مساج اور حجامہ · 2017 سے تجربہ',
+sportsH:'اسپورٹس سیشن',sportsLead:'ہر سیشن میں تمام ٹولز شامل ہیں:',
+tOil:'آئل مساج',tIastm:'IASTM ٹولز',tGun:'مساج گن',tFire:'فائر کپنگ',tSlide:'سلائیڈنگ کپنگ',tBreo:'Breo نیک مساجر',
+s1:'فوکسڈ سیشن',s1d:'اپر باڈی یا لوئر باڈی',s1m:'پورا آدھا جسم، صرف ایک پٹھا نہیں · کم از کم 60 منٹ',
+s2:'فل باڈی سیشن',s2d:'پورا جسم',m90:'کم از کم 90 منٹ',
+s3:'ڈیپ ریکوری سیشن',s3d:'کھلاڑیوں کے لیے، مقابلوں اور سخت ٹریننگ کے بعد',m120:'کم از کم 120 منٹ',
+aed:'درہم',book:'بک کریں',
+wetH:'ویٹ کپنگ (حجامہ)',wetLead:'20 منٹ کا ریلیکسنگ مساج اور سلائیڈنگ کپنگ شامل',tWet:'ویٹ کپنگ',tRelax:'ریلیکسنگ مساج',
+w1:'بیسک · 9 کپ تک',m40:'کم از کم 40 منٹ',w2:'مکمل · 15 کپ تک',m60:'کم از کم 60 منٹ',
+alertT:'نوٹ',alert:'قیمتوں میں آنے جانے کا خرچ شامل نہیں، یہ فاصلے کے مطابق مختلف ہوتا ہے۔',
+packsH:'پیکجز',packsLead:'بہتر قیمت پر فل سیشن',
+p1b:'100 درہم بچائیں',p1:'4 فل سیشن',p1v:'پہلے سیشن سے 6 ہفتے تک قابلِ استعمال',
+p2b:'سب سے زیادہ بچت · 300 درہم بچائیں',p2:'8 فل سیشن',p2v:'پہلے سیشن سے 12 ہفتے تک قابلِ استعمال',
+sub2:'پیکج لیں',cta:'واٹس ایپ پر بک کریں'}
+};
+/* WhatsApp messages: Arabic for Arabic visitors, English for everyone else so the coach can read them */
+var MSG = {
+ar:{hi:'أهلًا كابتن أحمد، عايز أحجز: ',ask:'أهلًا كابتن أحمد، عايز أستفسر عن الجلسات',cur:'درهم',
+s1:'جلسة مركزة',s2:'جلسة كاملة',s3:'جلسة استشفاء عميق',w1:'حجامة رطبة أساسية',w2:'حجامة رطبة شاملة',p1:'باقة 4 جلسات كاملة',p2:'باقة 8 جلسات كاملة'},
+en:{hi:'Hi Coach Ahmed, I would like to book: ',ask:'Hi Coach Ahmed, I would like to ask about the sessions',cur:'AED',
+s1:'Focused Session',s2:'Full Body Session',s3:'Deep Recovery Session',w1:'Wet Cupping - Basic',w2:'Wet Cupping - Complete',p1:'4 Full Sessions package',p2:'8 Full Sessions package'}
+};
+function apply(lang){
+  if(!T[lang]) lang='ar';
+  var t=T[lang];
+  document.documentElement.lang=lang;
+  document.documentElement.dir=t.dir;
+  document.title=t.doc;
+  document.querySelectorAll('[data-i]').forEach(function(el){
+    var k=el.getAttribute('data-i'); if(t[k]!=null) el.textContent=t[k];
+  });
+  var m=MSG[lang==='ar'?'ar':'en'];
+  document.querySelectorAll('[data-wa]').forEach(function(a){
+    var k=a.getAttribute('data-wa'), p=a.getAttribute('data-price');
+    var text = k==='ask' ? m.ask : m.hi + m[k] + ' (' + p + ' ' + m.cur + ')';
+    a.href='https://wa.me/'+PHONE+'?text='+encodeURIComponent(text);
+    a.target='_blank'; a.rel='noopener';
+  });
+  document.querySelectorAll('.langs button').forEach(function(b){
+    b.setAttribute('aria-pressed', b.getAttribute('data-set')===lang ? 'true':'false');
+  });
+  try{ localStorage.setItem('lang',lang); }catch(e){}
+}
+var btn=document.querySelector('.lang-btn'), menu=document.getElementById('langMenu');
+function openMenu(o){ menu.hidden=!o; btn.setAttribute('aria-expanded', o?'true':'false'); }
+btn.addEventListener('click',function(e){ e.stopPropagation(); openMenu(menu.hidden); });
+document.addEventListener('click',function(e){ if(!menu.hidden && !menu.contains(e.target)) openMenu(false); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape' && !menu.hidden){ openMenu(false); btn.focus(); } });
+document.querySelectorAll('.langs button').forEach(function(b){
+  b.addEventListener('click',function(){ apply(b.getAttribute('data-set')); openMenu(false); });
+});
+var start='ar';
+try{
+  var q=new URLSearchParams(location.search).get('lang');
+  start = q || localStorage.getItem('lang') || 'ar';
+}catch(e){}
+apply(start);
+})();
+</script>
+</body>
+</html>
