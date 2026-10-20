@@ -67,6 +67,12 @@ h1{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(38px,10vw
 section{margin-bottom:40px}
 h2{margin:0 0 6px;font-family:var(--display);font-weight:600;font-size:28px;color:var(--accent)}
 .lead{color:var(--muted);font-size:16px;margin:0 0 14px}
+.h-link{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:inherit}
+.h-link svg{width:24px;height:24px}
+.more{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;margin:0 0 16px;padding:10px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--chip);text-decoration:none;font-size:15px;font-weight:600;color:var(--text)}
+.more svg{width:20px;height:20px;flex-shrink:0;color:var(--accent)}
+.more:hover{border-color:var(--accent)}
+html[dir="rtl"] .h-link svg,html[dir="rtl"] .more svg{transform:scaleX(-1)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;padding:0;list-style:none}
 .chips li{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--text-2);border:1px solid var(--chip);border-radius:999px;padding:6px 14px}
 .chips svg{width:20px;height:20px;flex-shrink:0;color:var(--accent)}
@@ -202,8 +208,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 </section>
 
 <section aria-labelledby="wet">
-  <h2 id="wet" data-i="wetH">الحجامة الرطبة</h2>
+  <h2 id="wet"><a class="h-link" href="hijama.html"><span data-i="wetH">الحجامة الرطبة</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a></h2>
   <p class="lead" data-i="wetLead">شاملة تدليك استرخائي وحجامة متزحلقة لمدة 20 دقيقة</p>
+  <a class="more" href="hijama.html"><span data-i="more">دليل الحجامة الكامل: الاستعداد والعناية بعد الجلسة</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></a>
   <ul class="chips">
     <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14c0-5 2.5-9 6-9s6 4 6 9"/><path d="M4 14h16"/><path d="M12 16.5c1.2 1.5 1.8 2.5 1.8 3.4a1.8 1.8 0 0 1-3.6 0c0-.9.6-1.9 1.8-3.4z"/></svg><span data-i="tWet">حجامة رطبة</span></li>
     <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg><span data-i="tRelax">تدليك استرخائي</span></li>
@@ -294,7 +301,7 @@ s1:'جلسة مركزة',s1d:'Upper Body أو Lower Body',s1m:'نصف الجسم
 s2:'جلسة كاملة',s2d:'الجسم كله',m90:'لا تقل عن 90 دقيقة',
 s3:'جلسة استشفاء عميق',s3d:'للرياضيين، وبعد البطولات والمجهود العالي',m120:'لا تقل عن 120 دقيقة',
 aed:'درهم',book:'احجز',
-wetH:'الحجامة الرطبة',wetLead:'شاملة تدليك استرخائي وحجامة متزحلقة لمدة 20 دقيقة',tWet:'حجامة رطبة',tRelax:'تدليك استرخائي',
+more:'دليل الحجامة الكامل: الاستعداد والعناية بعد الجلسة',wetH:'الحجامة الرطبة',wetLead:'شاملة تدليك استرخائي وحجامة متزحلقة لمدة 20 دقيقة',tWet:'حجامة رطبة',tRelax:'تدليك استرخائي',
 w1:'أساسية · لحد 9 كاسات',m40:'لا تقل عن 40 دقيقة',w2:'شاملة · لحد 15 كاسة',m60:'لا تقل عن 60 دقيقة',
 alertT:'تنبيه',alert:'الأسعار غير شاملة مواصلات التنقل، وتختلف حسب المسافة.',
 packsH:'الباقات',packsLead:'جلسات كاملة بسعر أوفر',
@@ -309,7 +316,7 @@ s1:'Focused Session',s1d:'Upper Body or Lower Body',s1m:'The whole half of the b
 s2:'Full Body Session',s2d:'Whole body',m90:'At least 90 min',
 s3:'Deep Recovery Session',s3d:'For athletes, after competitions and intense training',m120:'At least 120 min',
 aed:'AED',book:'Book',
-wetH:'Wet Cupping (Hijama)',wetLead:'Includes 20 min of relaxing massage and sliding cupping',tWet:'Wet cupping',tRelax:'Relaxing massage',
+more:'The complete hijama guide: preparation and aftercare',wetH:'Wet Cupping (Hijama)',wetLead:'Includes 20 min of relaxing massage and sliding cupping',tWet:'Wet cupping',tRelax:'Relaxing massage',
 w1:'Basic · Up to 9 cups',m40:'At least 40 min',w2:'Complete · Up to 15 cups',m60:'At least 60 min',
 alertT:'Please note',alert:'Prices do not include transportation, which varies by distance.',
 packsH:'Packages',packsLead:'Full sessions at a better price',
@@ -324,7 +331,7 @@ s1:'फोकस्ड सेशन',s1d:'अपर बॉडी या लो�
 s2:'फुल बॉडी सेशन',s2d:'पूरा शरीर',m90:'कम से कम 90 मिनट',
 s3:'डीप रिकवरी सेशन',s3d:'एथलीटों के लिए, प्रतियोगिता और भारी ट्रेनिंग के बाद',m120:'कम से कम 120 मिनट',
 aed:'दिरहम',book:'बुक करें',
-wetH:'वेट कपिंग (हिजामा)',wetLead:'20 मिनट की रिलैक्सिंग मसाज और स्लाइडिंग कपिंग शामिल',tWet:'वेट कपिंग',tRelax:'रिलैक्सिंग मसाज',
+more:'हिजामा की पूरी गाइड (English): तैयारी और बाद की देखभाल',wetH:'वेट कपिंग (हिजामा)',wetLead:'20 मिनट की रिलैक्सिंग मसाज और स्लाइडिंग कपिंग शामिल',tWet:'वेट कपिंग',tRelax:'रिलैक्सिंग मसाज',
 w1:'बेसिक · 9 कप तक',m40:'कम से कम 40 मिनट',w2:'कम्प्लीट · 15 कप तक',m60:'कम से कम 60 मिनट',
 alertT:'ध्यान दें',alert:'कीमतों में आने-जाने का खर्च शामिल नहीं है, यह दूरी के अनुसार अलग होता है।',
 packsH:'पैकेज',packsLead:'बेहतर कीमत पर फुल सेशन',
@@ -339,7 +346,7 @@ s1:'فوکسڈ سیشن',s1d:'اپر باڈی یا لوئر باڈی',s1m:'پو�
 s2:'فل باڈی سیشن',s2d:'پورا جسم',m90:'کم از کم 90 منٹ',
 s3:'ڈیپ ریکوری سیشن',s3d:'کھلاڑیوں کے لیے، مقابلوں اور سخت ٹریننگ کے بعد',m120:'کم از کم 120 منٹ',
 aed:'درہم',book:'بک کریں',
-wetH:'ویٹ کپنگ (حجامہ)',wetLead:'20 منٹ کا ریلیکسنگ مساج اور سلائیڈنگ کپنگ شامل',tWet:'ویٹ کپنگ',tRelax:'ریلیکسنگ مساج',
+more:'حجامہ کی مکمل گائیڈ (English): تیاری اور بعد کی دیکھ بھال',wetH:'ویٹ کپنگ (حجامہ)',wetLead:'20 منٹ کا ریلیکسنگ مساج اور سلائیڈنگ کپنگ شامل',tWet:'ویٹ کپنگ',tRelax:'ریلیکسنگ مساج',
 w1:'بیسک · 9 کپ تک',m40:'کم از کم 40 منٹ',w2:'مکمل · 15 کپ تک',m60:'کم از کم 60 منٹ',
 alertT:'نوٹ',alert:'قیمتوں میں آنے جانے کا خرچ شامل نہیں، یہ فاصلے کے مطابق مختلف ہوتا ہے۔',
 packsH:'پیکجز',packsLead:'بہتر قیمت پر فل سیشن',

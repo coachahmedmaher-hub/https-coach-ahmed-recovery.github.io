@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الحجامة الرطبة | دليل العناية الكامل · كابتن أحمد ماهر</title>
+<meta name="description" content="دليلك للعناية قبل الحجامة الرطبة وبعدها: الاستعداد، ماذا تتوقع، العناية بالجلد، العودة للتدريب، وعلامات التحذير. Coach Ahmed Maher.">
+<meta property="og:title" content="HIJAMA · The Complete Care Guide | Coach Ahmed Maher">
+<meta property="og:description" content="دليلك للعناية قبل الحجامة الرطبة وبعدها">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#111315">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Readex+Pro:wght@500;600;700&display=swap">
+<style>
+:root{
+  --bg:#111315;
+  --surface:#1B1E21;
+  --surface-2:#24282C;
+  --line:#2A2E32;
+  --chip:#3A3F44;
+  --text:#F4F4EF;
+  --text-2:#E6E8E3;
+  --muted:#B4B9B5;
+  --muted-2:#A3A8A4;
+  --accent:#D9FF4A;
+  --on-accent:#111315;
+  --warn:#FFB547;
+  --warn-bg:#2A2112;
+  --danger:#FF7A7A;
+  --danger-bg:#2C1516;
+  --display:'Readex Pro','IBM Plex Sans Arabic',sans-serif;
+  --body:'IBM Plex Sans Arabic','Readex Pro',sans-serif;
+}
+html[lang="en"]{--display:'Readex Pro',sans-serif;--body:'Readex Pro',sans-serif}
+html[lang="ar"] [data-l="en"],html[lang="en"] [data-l="ar"]{display:none !important}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.75}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px 120px}
+@media (min-width:600px){.wrap{padding:28px 32px 120px}}
+
+/* top bar */
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:32px}
+.back{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px 0 12px;border-radius:999px;border:1px solid var(--chip);background:var(--surface);text-decoration:none;font-size:15px;font-weight:500;color:var(--text-2)}
+.back svg{width:20px;height:20px;color:var(--accent)}
+html[dir="rtl"] .back svg{transform:scaleX(-1)}
+.back:hover{border-color:var(--accent)}
+.lang{position:relative}
+.lang-btn{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid var(--chip);background:var(--surface);color:var(--accent);cursor:pointer;padding:0}
+.lang-btn svg{width:22px;height:22px}
+.lang-btn[aria-expanded="true"]{border-color:var(--accent)}
+.langs{position:absolute;top:52px;inset-inline-end:0;z-index:20;min-width:160px;margin:0;padding:6px;list-style:none;background:var(--surface);border:1px solid var(--chip);border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.5)}
+.langs[hidden]{display:none}
+.langs button{width:100%;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 14px;border:0;border-radius:10px;background:transparent;color:var(--text-2);font-size:16px;font-weight:500;cursor:pointer;text-align:start}
+.langs button:hover{background:var(--surface-2)}
+.langs button[lang="ar"]{font-family:'IBM Plex Sans Arabic',sans-serif}
+.langs button[lang="en"]{font-family:'Readex Pro',sans-serif}
+.langs button[aria-pressed="true"]{color:var(--accent);font-weight:600}
+.langs button[aria-pressed="true"]::after{content:"✓";font-family:'Readex Pro',sans-serif}
+
+/* hero */
+.hero{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.eyebrow{font-family:'Readex Pro',sans-serif;font-size:13px;font-weight:600;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
+.hero h1{margin:0;font-family:'Readex Pro',sans-serif;font-weight:700;font-size:clamp(56px,16vw,96px);line-height:1;letter-spacing:.02em}
+.hero .h1-sub{font-family:var(--display);font-weight:600;font-size:clamp(22px,5.5vw,28px);line-height:1.4}
+.hero .by{font-family:'Readex Pro',sans-serif;font-size:14px;font-weight:600;letter-spacing:.12em;color:var(--muted)}
+.bar{width:64px;height:5px;background:var(--accent);border-radius:3px;margin:8px 0 4px}
+.quote{margin:18px 0 0;padding:0;font-family:var(--display);font-weight:600;font-size:20px;line-height:1.6;color:var(--text)}
+.quote::before{content:"";display:block;width:28px;height:3px;background:var(--accent);margin-bottom:12px}
+
+.photo{display:flex;align-items:center;justify-content:center;gap:10px;flex-direction:column;border:1.5px dashed var(--chip);border-radius:20px;background:var(--surface);color:var(--muted-2);font-size:14px;text-align:center;padding:16px}
+.photo svg{width:32px;height:32px;color:var(--chip)}
+.photo.hero-photo{aspect-ratio:16/10;margin-bottom:28px}
+
+/* price card */
+.price-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px;margin-bottom:28px;display:flex;flex-direction:column;gap:14px}
+.price-card h2{margin:0;font-family:var(--display);font-weight:600;font-size:22px;color:var(--accent)}
+.price-card .inc{margin:0;color:var(--muted);font-size:15px}
+.tiers{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:520px){.tiers{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tier{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:4px}
+.tier .tname{font-family:var(--display);font-weight:600;font-size:18px}
+.tier .tmeta{color:var(--muted-2);font-size:14px}
+.tier .tprice{display:flex;align-items:baseline;gap:6px;margin-top:4px}
+.tier .tprice b{font-family:'Readex Pro',sans-serif;font-weight:700;font-size:36px;line-height:1;color:var(--accent)}
+.tier .tprice span{font-size:14px;color:var(--muted-2)}
+.book{display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin-top:10px;padding:0 16px;font-size:15px;font-weight:600;text-decoration:none;color:var(--accent);border:1px solid var(--accent);border-radius:999px}
+.book:hover{background:var(--accent);color:var(--on-accent)}
+.transport{display:flex;align-items:flex-start;gap:10px;margin:0;padding:12px 14px;border-radius:12px;background:var(--warn-bg);border:1px solid var(--warn);font-size:14px;line-height:1.6}
+.transport svg{width:20px;height:20px;flex-shrink:0;color:var(--warn);margin-top:2px}
+
+/* contents */
+.toc{margin:0 0 36px}
+.toc-title{font-family:var(--display);font-weight:600;font-size:16px;color:var(--muted);margin:0 0 10px}
+.toc ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:6px}
+@media (min-width:560px){.toc ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.toc a{display:flex;align-items:center;gap:12px;min-height:44px;padding:6px 14px;border-radius:12px;background:var(--surface);text-decoration:none;font-size:15px;color:var(--text-2)}
+.toc a:hover{background:var(--surface-2)}
+.toc a b{font-family:'Readex Pro',sans-serif;font-weight:700;font-size:14px;color:var(--accent);min-width:22px}
+
+/* sections */
+.sec{padding:36px 0;border-top:1px solid var(--line);scroll-margin-top:16px}
+.sec-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:18px}
+.num{font-family:'Readex Pro',sans-serif;font-weight:700;font-size:44px;line-height:1;color:var(--accent);flex-shrink:0}
+.sec-head .t{display:flex;flex-direction:column;gap:4px;padding-top:2px}
+.sec-head h2{margin:0;font-family:var(--display);font-weight:600;font-size:26px;line-height:1.3}
+.sec-head .en{font-family:'Readex Pro',sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--muted-2);text-transform:uppercase}
+.sec p{margin:0 0 12px;font-size:17px;color:var(--text-2)}
+.sec h3{margin:22px 0 8px;font-family:var(--display);font-weight:600;font-size:19px;color:var(--text);display:flex;align-items:center;gap:10px}
+.sec h3 .step{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-family:'Readex Pro',sans-serif;font-size:14px;font-weight:700;flex-shrink:0}
+.sec ul{margin:0 0 14px;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.sec ul li{position:relative;padding-inline-start:22px;font-size:17px;color:var(--text-2)}
+.sec ul li::before{content:"";position:absolute;inset-inline-start:2px;top:.72em;width:8px;height:8px;border-radius:2px;background:var(--accent)}
+.key{margin:18px 0 0;padding:16px 18px;border-radius:16px;background:var(--surface);font-family:var(--display);font-weight:600;font-size:18px;line-height:1.6;color:var(--accent)}
+.note{display:flex;align-items:flex-start;gap:12px;margin:16px 0 0;padding:14px 16px;border-radius:14px;background:var(--warn-bg);border:1px solid var(--warn)}
+.note svg{width:22px;height:22px;flex-shrink:0;color:var(--warn);margin-top:3px}
+.note p{margin:0;font-size:16px;color:var(--text)}
+.note strong{color:var(--warn)}
+.alert-box{margin:16px 0 0;padding:16px 18px;border-radius:16px;border:1px solid var(--warn);background:var(--warn-bg)}
+.alert-box.red{border-color:var(--danger);background:var(--danger-bg)}
+.alert-box .ah{display:flex;align-items:center;gap:10px;margin:0 0 10px;font-family:var(--display);font-weight:600;font-size:17px;color:var(--warn)}
+.alert-box.red .ah{color:var(--danger)}
+.alert-box .ah svg{width:22px;height:22px;flex-shrink:0}
+.alert-box ul{margin:0}
+.alert-box ul li::before{background:var(--warn)}
+.alert-box.red ul li::before{background:var(--danger)}
+
+/* myths */
+.faq{display:flex;flex-direction:column;gap:10px}
+.faq details{background:var(--surface);border-radius:16px;border:1px solid var(--line)}
+.faq details[open]{border-color:var(--chip)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;padding:12px 18px;font-family:var(--display);font-weight:600;font-size:17px;line-height:1.5}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:'Readex Pro',sans-serif;font-size:24px;font-weight:500;color:var(--accent);flex-shrink:0;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq .ans{padding:0 18px 16px}
+.faq .ans p{margin:0;font-size:16px}
+.faq .ans b{color:var(--accent);font-family:var(--display)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.gallery .photo{aspect-ratio:1/1}
+.gallery .photo:first-child{grid-column:1 / -1;aspect-ratio:16/9}
+
+/* message */
+.msg{background:var(--surface);border-radius:22px;padding:24px;border:1px solid var(--line)}
+.msg p{font-size:17px}
+.msg .key{background:var(--bg);margin-top:8px}
+.sign{margin-top:18px;display:flex;flex-direction:column;gap:6px}
+.sign .name{font-family:'Readex Pro',sans-serif;font-weight:700;font-size:18px;letter-spacing:.08em}
+.sign a{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;font-family:'Readex Pro',sans-serif;font-weight:600;font-size:16px}
+.sign svg{width:26px;height:26px;flex-shrink:0}
+
+.disclaimer{margin:32px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:14px;line-height:1.7;color:var(--muted-2);font-style:normal}
+
+.cta{position:fixed;inset-inline:16px;bottom:16px;max-width:688px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;border-radius:999px;background:#25D366;color:#062E16;font-family:var(--display);font-weight:700;font-size:19px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.45);z-index:10}
+.cta:hover{background:#2EE875}
+.cta svg{width:28px;height:28px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<div class="topbar">
+  <a class="back" href="index.html">
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    <span data-l="ar">كل الخدمات والأسعار</span><span data-l="en">All services & prices</span>
+  </a>
+  <div class="lang">
+    <button type="button" class="lang-btn" aria-label="Language / اللغة" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+    </button>
+    <ul class="langs" id="langMenu" hidden>
+      <li><button type="button" lang="ar" data-set="ar" aria-pressed="true">العربية</button></li>
+      <li><button type="button" lang="en" data-set="en" aria-pressed="false">English</button></li>
+    </ul>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="eyebrow">The Complete Care Guide</div>
+  <h1>HIJAMA</h1>
+  <div class="h1-sub" data-l="ar">دليلك للعناية قبل الحجامة الرطبة وبعدها</div>
+  <div class="h1-sub" data-l="en">Your guide to care before and after wet cupping</div>
+  <div class="bar"></div>
+  <div class="by">COACH AHMED MAHER</div>
+  <p class="quote" data-l="ar">العناية الجيدة لا تبدأ عند وضع الكأس، ولا تنتهي عند إزالته.</p>
+  <p class="quote" data-l="en">Good care doesn't begin when the cup goes on, and it doesn't end when it comes off.</p>
+</header>
+
+<div class="photo hero-photo" role="img" aria-label="مكان صورة رئيسية">
+  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-8 8"/></svg>
+  <span data-l="ar">صورة رئيسية للحجامة</span><span data-l="en">Main hijama photo</span>
+</div>
+
+<section class="price-card" aria-labelledby="prices">
+  <h2 id="prices"><span data-l="ar">جلسات الحجامة الرطبة</span><span data-l="en">Wet Cupping Sessions</span></h2>
+  <p class="inc" data-l="ar">شاملة تدليك استرخائي وحجامة متزحلقة لمدة 20 دقيقة</p>
+  <p class="inc" data-l="en">Includes 20 min of relaxing massage and sliding cupping</p>
+  <div class="tiers">
+    <div class="tier">
+      <div class="tname"><span data-l="ar">أساسية · لحد 9 كاسات</span><span data-l="en">Basic · Up to 9 cups</span></div>
+      <div class="tmeta"><span data-l="ar">لا تقل عن 40 دقيقة</span><span data-l="en">At least 40 min</span></div>
+      <div class="tprice"><b>230</b><span data-l="ar">درهم</span><span data-l="en">AED</span></div>
+      <a class="book" href="https://wa.me/971562723518" data-wa="w1" data-price="230"><span data-l="ar">احجز</span><span data-l="en">Book</span></a>
+    </div>
+    <div class="tier">
+      <div class="tname"><span data-l="ar">شاملة · لحد 15 كاسة</span><span data-l="en">Complete · Up to 15 cups</span></div>
+      <div class="tmeta"><span data-l="ar">لا تقل عن 60 دقيقة</span><span data-l="en">At least 60 min</span></div>
+      <div class="tprice"><b>300</b><span data-l="ar">درهم</span><span data-l="en">AED</span></div>
+      <a class="book" href="https://wa.me/971562723518" data-wa="w2" data-price="300"><span data-l="ar">احجز</span><span data-l="en">Book</span></a>
+    </div>
+  </div>
+  <p class="transport">
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>
+    <span data-l="ar">جلسات منزلية برايفت. الأسعار غير شاملة مواصلات التنقل، وتختلف حسب المسافة.</span>
+    <span data-l="en">Private home sessions. Prices do not include transportation, which varies by distance.</span>
+  </p>
+</section>
+
+<nav class="toc" aria-labelledby="tocT">
+  <p class="toc-title" id="tocT"><span data-l="ar">محتوى الدليل</span><span data-l="en">In this guide</span></p>
+  <ol>
+    <li><a href="#s1"><b>01</b><span data-l="ar">أهلًا بك في تجربتك</span><span data-l="en">Welcome</span></a></li>
+    <li><a href="#s2"><b>02</b><span data-l="ar">قبل أن تبدأ</span><span data-l="en">Before you book</span></a></li>
+    <li><a href="#s3"><b>03</b><span data-l="ar">استعد بطريقة صحيحة</span><span data-l="en">Prepare the right way</span></a></li>
+    <li><a href="#s4"><b>04</b><span data-l="ar">ماذا تتوقع أثناء الجلسة؟</span><span data-l="en">What to expect</span></a></li>
+    <li><a href="#s5"><b>05</b><span data-l="ar">الساعات الأولى بعد الحجامة</span><span data-l="en">Your first hours of recovery</span></a></li>
+    <li><a href="#s6"><b>06</b><span data-l="ar">العناية بالجلد</span><span data-l="en">Skin care & healing</span></a></li>
+    <li><a href="#s7"><b>07</b><span data-l="ar">العودة إلى التدريب</span><span data-l="en">Back to training</span></a></li>
+    <li><a href="#s8"><b>08</b><span data-l="ar">متى يجب طلب المساعدة؟</span><span data-l="en">Know the warning signs</span></a></li>
+    <li><a href="#s9"><b>09</b><span data-l="ar">حقائق تستحق أن تعرفها</span><span data-l="en">Facts over myths</span></a></li>
+    <li><a href="#s10"><b>10</b><span data-l="ar">رسالتي إليك</span><span data-l="en">A message from your practitioner</span></a></li>
+  </ol>
+</nav>
+
+<!-- 01 -->
+<section class="sec" id="s1">
+  <div class="sec-head"><div class="num">01</div><div class="t">
+    <h2><span data-l="ar">أهلًا بك في تجربتك</span><span data-l="en">Welcome to Your Session</span></h2>
+    <div class="en">Welcome to your session</div>
+  </div></div>
+  <div data-l="ar">
+    <p>الحجامة ممارسة تقليدية عُرفت منذ قرون في ثقافات متعددة.</p>
+    <p>وفي الحجامة الرطبة، يُستخدم الشفط مع إحداث فتحات سطحية في الجلد تسمح بخروج كمية من الدم.</p>
+    <p>قد تساعد الحجامة بعض الأشخاص على تخفيف أنواع معينة من الألم بصورة مؤقتة، لكن الأبحاث العلمية المتاحة لا تزال محدودة، ولا يمكن اعتبارها علاجًا مثبتًا لجميع الأمراض.</p>
+    <p class="key">هدفنا هو تقديم تجربة واعية، تحترم صحتك وراحتك وسلامتك.</p>
+    <div class="note"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg><p>الحجامة ليست بديلًا عن التشخيص الطبي أو العلاج الموصوف.</p></div>
+  </div>
+  <div data-l="en">
+    <p>Hijama is a traditional practice that has been known for centuries across many cultures.</p>
+    <p>In wet cupping, suction is combined with small, superficial openings in the skin that allow a small amount of blood to be drawn.</p>
+    <p>Hijama may help some people temporarily relieve certain types of pain, but the available scientific research is still limited, and it cannot be considered a proven treatment for all diseases.</p>
+    <p class="key">Our goal is to offer a mindful experience that respects your health, comfort and safety.</p>
+    <div class="note"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg><p>Hijama is not a substitute for medical diagnosis or prescribed treatment.</p></div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="sec" id="s2">
+  <div class="sec-head"><div class="num">02</div><div class="t">
+    <h2><span data-l="ar">قبل أن تبدأ</span><span data-l="en">Before You Book</span></h2>
+    <div class="en">Your health comes first</div>
+  </div></div>
+  <div data-l="ar">
+    <p>قبل تحديد موعد الجلسة، من المهم إخبار الممارس بتاريخك الصحي، خاصة إذا كان لديك:</p>
+    <ul>
+      <li>أنيميا أو نقص في الهيموجلوبين.</li>
+      <li>اضطرابات النزيف أو التجلط.</li>
+      <li>تاريخ من الإغماء أو الدوخة أثناء الإجراءات الطبية.</li>
+      <li>أمراض مزمنة أو مشكلات بالقلب والدورة الدموية.</li>
+      <li>مرض السكري، خصوصًا مع ضعف التئام الجروح أو فقدان الإحساس.</li>
+      <li>ضعف المناعة أو استخدام أدوية مثبطة للمناعة.</li>
+      <li>أمراض جلدية أو جروح أو التهابات في منطقة التطبيق.</li>
+      <li>حمل أو احتمال وجود حمل.</li>
+      <li>حساسية من المطهرات أو المواد المستخدمة أثناء الجلسة.</li>
+    </ul>
+    <div class="note"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg><p><strong>مهم:</strong> أخبر الممارس بجميع الأدوية التي تتناولها، وخاصة الأسبرين ومضادات التجلط والأدوية التي تؤثر على النزيف.</p></div>
+    <p style="margin-top:16px">لا توقف أي دواء موصوف من تلقاء نفسك من أجل الحجامة.</p>
+    <p>بعض الحالات تتطلب تأجيل الجلسة أو تجنبها أو الحصول على تقييم طبي مسبق.</p>
+  </div>
+  <div data-l="en">
+    <p>Before booking your session, it is important to tell the practitioner about your health history, especially if you have:</p>
+    <ul>
+      <li>Anemia or low hemoglobin.</li>
+      <li>Bleeding or clotting disorders.</li>
+      <li>A history of fainting or dizziness during medical procedures.</li>
+      <li>Chronic illnesses, or heart and circulation problems.</li>
+      <li>Diabetes, especially with poor wound healing or loss of sensation.</li>
+      <li>Weakened immunity, or use of immunosuppressive medication.</li>
+      <li>Skin conditions, wounds or infections in the treatment area.</li>
+      <li>Pregnancy or possible pregnancy.</li>
+      <li>Allergy to antiseptics or materials used during the session.</li>
+    </ul>
+    <div class="note"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg><p><strong>Important:</strong> Tell the practitioner about every medication you take, especially aspirin, anticoagulants and any medication that affects bleeding.</p></div>
+    <p style="margin-top:16px">Do not stop any prescribed medication on your own for the sake of hijama.</p>
+    <p>Some conditions require postponing or avoiding the session, or getting a medical assessment first.</p>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="sec" id="s3">
+  <div class="sec-head"><div class="num">03</div><div class="t">
+    <h2><span data-l="ar">استعد بطريقة صحيحة</span><span data-l="en">Prepare the Right Way</span></h2>
+    <div class="en">Before your session</div>
+  </div></div>
+  <div data-l="ar">
+    <h3>التغذية والترطيب</h3>
+    <p>تناول وجبة خفيفة ومتوازنة قبل الجلسة بوقت مناسب، وتجنب الحضور وأنت تشعر بجوع شديد أو دوخة.</p>
+    <p>اشرب كمية مناسبة من الماء خلال يومك، خصوصًا في الأجواء الحارة.</p>
+    <p>لا يُشترط الصيام قبل الحجامة لأسباب طبية روتينية.</p>
+    <h3>النشاط البدني</h3>
+    <p>إذا كنت قد انتهيت للتو من تمرين شديد أو تشعر بإرهاق واضح أو جفاف، فمن الأفضل تأجيل الجلسة حتى تستعيد حالتك الطبيعية.</p>
+    <h3>نظافة الجلد</h3>
+    <p>احرص على نظافة منطقة التطبيق.</p>
+    <p>تجنب استخدام مستحضرات قد تسبب تهيج الجلد قبل الجلسة، ولا تحلق المنطقة بطريقة تؤدي إلى خدوش أو جروح.</p>
+    <h3>الراحة</h3>
+    <p>احصل على نوم مناسب، وأخبر الممارس إذا كنت تشعر بتعب غير معتاد أو مرض حاد أو ارتفاع في درجة الحرارة.</p>
+    <p class="key">تذكّر: استعدادك الجيد يبدأ بالصدق في وصف حالتك الصحية، وليس باتباع قائمة طويلة من الممنوعات.</p>
+  </div>
+  <div data-l="en">
+    <h3>Nutrition & hydration</h3>
+    <p>Eat a light, balanced meal a reasonable time before the session, and avoid arriving very hungry or dizzy.</p>
+    <p>Drink an adequate amount of water throughout your day, especially in hot weather.</p>
+    <p>Fasting before hijama is not required for routine medical reasons.</p>
+    <h3>Physical activity</h3>
+    <p>If you have just finished an intense workout, or you feel clearly exhausted or dehydrated, it is better to postpone the session until you are back to normal.</p>
+    <h3>Skin hygiene</h3>
+    <p>Make sure the treatment area is clean.</p>
+    <p>Avoid products that may irritate the skin before the session, and don't shave the area in a way that causes scratches or cuts.</p>
+    <h3>Rest</h3>
+    <p>Get enough sleep, and tell the practitioner if you feel unusually tired, have an acute illness or a raised temperature.</p>
+    <p class="key">Remember: good preparation starts with being honest about your health, not with following a long list of don'ts.</p>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="sec" id="s4">
+  <div class="sec-head"><div class="num">04</div><div class="t">
+    <h2><span data-l="ar">ماذا تتوقع أثناء الجلسة؟</span><span data-l="en">What to Expect During the Session</span></h2>
+    <div class="en">What to expect</div>
+  </div></div>
+  <div data-l="ar">
+    <p>قبل البدء، تُراجع حالتك الصحية ومدى ملاءمة الإجراء لك، وتُشرح لك خطوات الجلسة والمخاطر المحتملة.</p>
+    <p>قد تشعر بشدّ في الجلد نتيجة الشفط، أو بوخز وانزعاج أثناء الجزء المتعلق بفتح الجلد.</p>
+    <p>يمكن أن تظهر علامات دائرية مؤقتة أو تغيرات في لون الجلد، وقد يحدث ألم موضعي خفيف.</p>
+    <div class="alert-box">
+      <p class="ah"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>أخبر الممارس فورًا إذا شعرت بـ:</p>
+      <ul>
+        <li>دوخة شديدة أو قرب الإغماء.</li>
+        <li>ألم غير محتمل.</li>
+        <li>غثيان شديد أو تعرق بارد.</li>
+        <li>صعوبة في التنفس أو أي شعور غير معتاد.</li>
+      </ul>
+    </div>
+    <p class="key">راحتك مهمة. ويمكنك طلب إيقاف الجلسة في أي وقت.</p>
+  </div>
+  <div data-l="en">
+    <p>Before we begin, your health and the suitability of the procedure for you are reviewed, and the steps of the session and the possible risks are explained to you.</p>
+    <p>You may feel the skin being pulled by the suction, or a prick and some discomfort during the part where the skin is opened.</p>
+    <p>Temporary circular marks or changes in skin colour may appear, and mild local soreness can occur.</p>
+    <div class="alert-box">
+      <p class="ah"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>Tell the practitioner immediately if you feel:</p>
+      <ul>
+        <li>Severe dizziness or that you are about to faint.</li>
+        <li>Unbearable pain.</li>
+        <li>Severe nausea or a cold sweat.</li>
+        <li>Difficulty breathing, or anything unusual.</li>
+      </ul>
+    </div>
+    <p class="key">Your comfort matters. You can ask to stop the session at any time.</p>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="sec" id="s5">
+  <div class="sec-head"><div class="num">05</div><div class="t">
+    <h2><span data-l="ar">الساعات الأولى بعد الحجامة</span><span data-l="en">Your First Hours of Recovery</span></h2>
+    <div class="en">Your first hours of recovery</div>
+  </div></div>
+  <div data-l="ar">
+    <p>بعد الحجامة الرطبة، يحتاج الجلد إلى العناية لأن مواضع التطبيق تتضمن فتحات صغيرة.</p>
+    <h3><span class="step">1</span>اهتم بالترطيب</h3>
+    <p>اشرب الماء بصورة طبيعية، وتناول وجباتك المعتادة.</p>
+    <p>لا توجد ضرورة طبية عامة للامتناع عن الطعام لعدة ساعات بعد الجلسة.</p>
+    <h3><span class="step">2</span>امنح جسمك الراحة</h3>
+    <p>إذا شعرت بدوخة أو إرهاق، اجلس أو استلقِ حتى تتحسن حالتك.</p>
+    <p>تجنب القيادة أو النشاط الذي يحتاج تركيزًا كاملًا إذا استمرت الدوخة.</p>
+    <h3><span class="step">3</span>حافظ على نظافة مواضع الحجامة</h3>
+    <p>اتبع تعليمات الممارس بشأن الضمادات وتنظيف الجلد.</p>
+    <p>تجنب لمس الجروح بأيدٍ غير نظيفة أو استخدام زيوت وكريمات ومستحضرات غير موصى بها.</p>
+    <h3><span class="step">4</span>لا تتعجل العودة للمجهود</h3>
+    <p>تجنب التمارين الشديدة والاحتكاك المباشر بمواضع الحجامة حتى يتوقف أي نزف تمامًا وتبدأ الجروح في الالتئام بصورة مناسبة.</p>
+  </div>
+  <div data-l="en">
+    <p>After wet cupping, the skin needs care because the treated spots include small openings.</p>
+    <h3><span class="step">1</span>Stay hydrated</h3>
+    <p>Drink water normally and eat your usual meals.</p>
+    <p>There is no general medical need to avoid food for several hours after the session.</p>
+    <h3><span class="step">2</span>Let your body rest</h3>
+    <p>If you feel dizzy or tired, sit or lie down until you feel better.</p>
+    <p>Avoid driving or any activity that needs full concentration if the dizziness continues.</p>
+    <h3><span class="step">3</span>Keep the cupping spots clean</h3>
+    <p>Follow the practitioner's instructions on dressings and cleaning the skin.</p>
+    <p>Avoid touching the wounds with unclean hands, or using oils, creams and products that were not recommended.</p>
+    <h3><span class="step">4</span>Don't rush back to effort</h3>
+    <p>Avoid intense exercise and direct friction on the cupping spots until any bleeding has completely stopped and the wounds have begun to heal properly.</p>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="sec" id="s6">
+  <div class="sec-head"><div class="num">06</div><div class="t">
+    <h2><span data-l="ar">العناية بالجلد</span><span data-l="en">Skin Care & Healing</span></h2>
+    <div class="en">Skin care &amp; healing</div>
+  </div></div>
+  <div data-l="ar">
+    <p>من الطبيعي أن تظهر بعض العلامات المؤقتة على الجلد بعد الحجامة.</p>
+    <p>وقد تشعر بحساسية بسيطة أو انزعاج موضعي خلال فترة التعافي.</p>
+    <p>للعناية بالمنطقة:</p>
+    <ul>
+      <li>حافظ على نظافة الجروح وجفاف الضمادات حسب التعليمات.</li>
+      <li>غيّر الضمادة إذا أصبحت مبللة أو متسخة، وفق الإرشادات التي تلقيتها.</li>
+      <li>تجنب حك الجلد أو نزع القشور.</li>
+      <li>تجنب السباحة وأحواض المياه المشتركة ونقع المنطقة حتى تُغلق الجروح وتلتئم.</li>
+      <li>تجنب الاحتكاك الشديد والملابس التي تسبب تهيج مواضع التطبيق.</li>
+    </ul>
+    <p>يمكن الاستحمام عندما تسمح حالة الجروح والضمادات بذلك وفق تعليمات العناية المقدمة لك، مع تجنب فرك المنطقة أو نقعها.</p>
+    <div class="note"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg><p><strong>مهم:</strong> إذا لاحظت أن مواضع الجروح لا تتحسن، أو أن الألم يزداد بدلًا من أن يقل، فلا تتجاهل ذلك.</p></div>
+  </div>
+  <div data-l="en">
+    <p>It is normal for some temporary marks to appear on the skin after hijama.</p>
+    <p>You may also feel mild sensitivity or local discomfort during recovery.</p>
+    <p>To care for the area:</p>
+    <ul>
+      <li>Keep the wounds clean and the dressings dry, as instructed.</li>
+      <li>Change the dressing if it gets wet or dirty, following the guidance you received.</li>
+      <li>Avoid scratching the skin or picking off scabs.</li>
+      <li>Avoid swimming, shared pools and soaking the area until the wounds have closed and healed.</li>
+      <li>Avoid heavy friction and clothing that irritates the treated spots.</li>
+    </ul>
+    <p>You can shower once the wounds and dressings allow it, following the care instructions you were given, while avoiding rubbing or soaking the area.</p>
+    <div class="note"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg><p><strong>Important:</strong> If the wounds are not improving, or the pain is increasing instead of easing, don't ignore it.</p></div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="sec" id="s7">
+  <div class="sec-head"><div class="num">07</div><div class="t">
+    <h2><span data-l="ar">العودة إلى التدريب</span><span data-l="en">Back to Training</span></h2>
+    <div class="en">Back to training</div>
+  </div></div>
+  <div data-l="ar">
+    <p>إذا كنت شخصًا نشطًا أو رياضيًا، فلا داعي للتعامل مع الحجامة وكأنها اختبار لتحملك.</p>
+    <p>لا توجد مدة واحدة مثبتة علميًا تصلح لجميع الأشخاص للعودة إلى التمارين بعد الحجامة الرطبة.</p>
+    <p>يعتمد القرار على:</p>
+    <ul>
+      <li>حالتك العامة بعد الجلسة.</li>
+      <li>وجود دوخة أو إرهاق.</li>
+      <li>توقف النزيف.</li>
+      <li>مواضع الجروح ومدى التئامها.</li>
+      <li>نوع التدريب وشدته والاحتكاك المتوقع بالجلد.</li>
+    </ul>
+    <p class="key">القاعدة الأهم: لا تبدأ تمرينًا شديدًا قبل التأكد من استقرار حالتك وحماية مواضع الحجامة.</p>
+    <p style="margin-top:16px">إذا ظهرت أعراض غير معتادة، اطلب التقييم الطبي قبل العودة إلى التدريب.</p>
+  </div>
+  <div data-l="en">
+    <p>If you are active or an athlete, there is no need to treat hijama as a test of your toughness.</p>
+    <p>There is no single, scientifically proven time frame that suits everyone for returning to exercise after wet cupping.</p>
+    <p>The decision depends on:</p>
+    <ul>
+      <li>Your general condition after the session.</li>
+      <li>Whether you feel dizzy or tired.</li>
+      <li>Whether the bleeding has stopped.</li>
+      <li>Where the wounds are and how well they are healing.</li>
+      <li>The type and intensity of training, and the expected friction on the skin.</li>
+    </ul>
+    <p class="key">The most important rule: don't start intense training until you are sure you are stable and the cupping spots are protected.</p>
+    <p style="margin-top:16px">If unusual symptoms appear, get a medical assessment before returning to training.</p>
+  </div>
+</section>
+
+<!-- 08 -->
+<section class="sec" id="s8">
+  <div class="sec-head"><div class="num">08</div><div class="t">
+    <h2><span data-l="ar">متى يجب طلب المساعدة؟</span><span data-l="en">When to Get Help</span></h2>
+    <div class="en">Know the warning signs</div>
+  </div></div>
+  <div data-l="ar">
+    <p>بعض الأعراض تستدعي تقييمًا طبيًا بدلًا من انتظار اختفائها.</p>
+    <div class="alert-box">
+      <p class="ah"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>اطلب تقييمًا طبيًا سريعًا عند ظهور:</p>
+      <ul>
+        <li>حمّى أو قشعريرة.</li>
+        <li>احمرار متزايد أو تورم أو سخونة حول الجروح.</li>
+        <li>إفرازات صديدية أو رائحة غير معتادة.</li>
+        <li>ألم يتزايد بمرور الوقت.</li>
+        <li>نزيف مستمر أو متكرر.</li>
+        <li>دوخة لا تتحسن أو ضعف غير معتاد.</li>
+      </ul>
+    </div>
+    <div class="alert-box red">
+      <p class="ah"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/><path d="M12 9v4"/><path d="M10 11h4"/></svg>اطلب المساعدة الطبية الطارئة عند حدوث:</p>
+      <ul>
+        <li>نزيف غزير لا يتوقف بالضغط المباشر.</li>
+        <li>فقدان الوعي أو صعوبة التنفس.</li>
+        <li>ألم بالصدر أو أعراض شديدة مفاجئة.</li>
+      </ul>
+    </div>
+    <p style="margin-top:16px">ارتفاع درجة حرارة الجسم الحقيقي بعد الحجامة ليس دليلًا على خروج السموم أو تنشيط المناعة، ويجب عدم تجاهله.</p>
+  </div>
+  <div data-l="en">
+    <p>Some symptoms call for a medical assessment rather than waiting for them to go away.</p>
+    <div class="alert-box">
+      <p class="ah"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>Get a prompt medical assessment if you notice:</p>
+      <ul>
+        <li>Fever or chills.</li>
+        <li>Increasing redness, swelling or warmth around the wounds.</li>
+        <li>Pus-like discharge or an unusual smell.</li>
+        <li>Pain that keeps getting worse over time.</li>
+        <li>Ongoing or recurring bleeding.</li>
+        <li>Dizziness that doesn't improve, or unusual weakness.</li>
+      </ul>
+    </div>
+    <div class="alert-box red">
+      <p class="ah"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/><path d="M12 9v4"/><path d="M10 11h4"/></svg>Get emergency medical help if you have:</p>
+      <ul>
+        <li>Heavy bleeding that doesn't stop with direct pressure.</li>
+        <li>Loss of consciousness or difficulty breathing.</li>
+        <li>Chest pain or sudden severe symptoms.</li>
+      </ul>
+    </div>
+    <p style="margin-top:16px">A real rise in body temperature after hijama is not a sign of toxins leaving the body or of the immune system being activated, and it should not be ignored.</p>
+  </div>
+</section>
+
+<!-- 09 -->
+<section class="sec" id="s9">
+  <div class="sec-head"><div class="num">09</div><div class="t">
+    <h2><span data-l="ar">حقائق تستحق أن تعرفها</span><span data-l="en">Facts Worth Knowing</span></h2>
+    <div class="en">Hijama: facts over myths</div>
+  </div></div>
+  <div class="faq" data-l="ar">
+    <details><summary>هل الدم الخارج من الحجامة دم فاسد؟</summary><div class="ans"><p><b>لا.</b> لا يوجد تصنيف طبي معتمد يسمى «الدم الفاسد» بهذا المعنى. ولا يثبت لون الدم أو كميته وجود سموم في الجسم.</p></div></details>
+    <details><summary>هل خروج دم أكثر يعني نتيجة أفضل؟</summary><div class="ans"><p><b>لا.</b> كمية الدم الخارجة ليست مقياسًا مثبتًا لنجاح الجلسة أو فعاليتها.</p></div></details>
+    <details><summary>هل الحجامة تنظف الجسم من السموم؟</summary><div class="ans"><p>لا توجد أدلة سريرية قوية تثبت أن الحجامة تزيل السموم من الجسم بصورة علاجية. الكبد والكليتان يؤديان دورًا رئيسيًا في معالجة المواد والتخلص من الفضلات.</p></div></details>
+    <details><summary>هل يحتاج الجميع إلى الحجامة بصورة دورية؟</summary><div class="ans"><p>لا توجد توصية طبية عامة تُلزم الأشخاص الأصحاء بالحجامة الدورية.</p></div></details>
+    <details><summary>هل يمكن أن تحل الحجامة محل العلاج الطبيعي أو الأدوية؟</summary><div class="ans"><p><b>لا.</b> يمكن مناقشتها باعتبارها ممارسة تكميلية في بعض الحالات، لكنها لا تحل محل العلاجات الطبية المثبتة.</p></div></details>
+  </div>
+  <div class="faq" data-l="en">
+    <details><summary>Is the blood drawn during hijama "bad blood"?</summary><div class="ans"><p><b>No.</b> There is no recognised medical category called "bad blood" in that sense, and the colour or amount of blood does not prove the presence of toxins in the body.</p></div></details>
+    <details><summary>Does more blood mean a better result?</summary><div class="ans"><p><b>No.</b> The amount of blood drawn is not a proven measure of a session's success or effectiveness.</p></div></details>
+    <details><summary>Does hijama detox the body?</summary><div class="ans"><p>There is no strong clinical evidence that hijama removes toxins from the body as a treatment. The liver and kidneys play the main role in processing substances and clearing waste.</p></div></details>
+    <details><summary>Does everyone need regular hijama?</summary><div class="ans"><p>There is no general medical recommendation requiring healthy people to have regular hijama.</p></div></details>
+    <details><summary>Can hijama replace physiotherapy or medication?</summary><div class="ans"><p><b>No.</b> It can be discussed as a complementary practice in some cases, but it does not replace proven medical treatments.</p></div></details>
+  </div>
+</section>
+
+<!-- gallery -->
+<section class="sec" aria-labelledby="galT">
+  <div class="sec-head"><div class="t">
+    <h2 id="galT"><span data-l="ar">من الجلسات</span><span data-l="en">From the sessions</span></h2>
+  </div></div>
+  <div class="gallery">
+    <div class="photo" role="img" aria-label="مكان صورة"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-8 8"/></svg><span data-l="ar">صورة 1</span><span data-l="en">Photo 1</span></div>
+    <div class="photo" role="img" aria-label="مكان صورة"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-8 8"/></svg><span data-l="ar">صورة 2</span><span data-l="en">Photo 2</span></div>
+    <div class="photo" role="img" aria-label="مكان صورة"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-8 8"/></svg><span data-l="ar">صورة 3</span><span data-l="en">Photo 3</span></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="sec" id="s10">
+  <div class="sec-head"><div class="num">10</div><div class="t">
+    <h2><span data-l="ar">رسالتي إليك</span><span data-l="en">My Message to You</span></h2>
+    <div class="en">A message from your practitioner</div>
+  </div></div>
+  <div class="msg">
+    <div data-l="ar">
+      <p>أؤمن أن العناية الحقيقية بالصحة تبدأ بالمعرفة، وليس بالمبالغة في الوعود.</p>
+      <p>لذلك أحرص على أن تفهم ما يحدث خلال الجلسة، وما يمكن توقعه بعدها، وكيف تعتني بنفسك بصورة صحيحة.</p>
+      <p>الحجامة ممارسة لها تاريخ طويل، لكن احترام هذا التاريخ لا يمنعنا من مراجعة المعلومات علميًا، وتصحيح المفاهيم، وتقديم السلامة على أي شيء آخر.</p>
+      <p class="key">صحتك أولًا. ووعيك جزء من العناية بها.</p>
+    </div>
+    <div data-l="en">
+      <p>I believe real health care starts with knowledge, not with exaggerated promises.</p>
+      <p>That's why I make sure you understand what happens during the session, what to expect afterwards, and how to take care of yourself properly.</p>
+      <p>Hijama has a long history, but respecting that history doesn't stop us from reviewing the information scientifically, correcting misconceptions, and putting safety before anything else.</p>
+      <p class="key">Your health comes first. And your awareness is part of caring for it.</p>
+    </div>
+    <div class="sign">
+      <div class="name">COACH AHMED MAHER</div>
+      <a href="https://instagram.com/coach.ahmed.maher" target="_blank" rel="noopener">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><defs><radialGradient id="igGrad" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#FDF497"/><stop offset=".05" stop-color="#FDF497"/><stop offset=".45" stop-color="#FD5949"/><stop offset=".6" stop-color="#D6249F"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><rect x="2" y="2" width="20" height="20" rx="6" fill="url(#igGrad)"/><rect x="6" y="6" width="12" height="12" rx="3.6" fill="none" stroke="#FFFFFF" stroke-width="1.7"/><circle cx="12" cy="12" r="3" fill="none" stroke="#FFFFFF" stroke-width="1.7"/><circle cx="15.6" cy="8.4" r=".9" fill="#FFFFFF"/></svg>
+        <span dir="ltr">@coach.ahmed.maher</span>
+      </a>
+      <a href="https://wa.me/971562723518" data-wa="ask">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path fill="#25D366" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/><path fill="#FFFFFF" d="M9.2 7.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.3 3.6 5.6 4.9 2.8 1.1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4l-2-1c-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2z"/></svg>
+        <span dir="ltr">056 272 3518</span>
+      </a>
+    </div>
+  </div>
+
+  <p class="disclaimer" data-l="ar">تنويه: هذا الدليل للتثقيف والعناية العامة، ولا يحل محل التقييم الطبي الفردي. يجب إجراء الحجامة الرطبة فقط ضمن نطاق التأهيل والترخيص المعمول به في بلد الممارسة، وباستخدام إجراءات معتمدة للوقاية من العدوى.</p>
+  <p class="disclaimer" data-l="en">Disclaimer: This guide is for education and general care, and does not replace an individual medical assessment. Wet cupping should only be performed within the qualifications and licensing in force in the country of practice, using approved infection-prevention procedures.</p>
+</section>
+
+</main>
+
+<a class="cta" href="https://wa.me/971562723518" data-wa="book">
+  <svg aria-hidden="true" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/><path fill="#25D366" d="M9.2 7.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.3 3.6 5.6 4.9 2.8 1.1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4l-2-1c-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2z"/></svg>
+  <span data-l="ar">احجز جلسة حجامة</span><span data-l="en">Book a hijama session</span>
+</a>
+
+<script>
+(function(){
+var PHONE='971562723518';
+var MSG={
+ar:{hi:'أهلًا كابتن أحمد، عايز أحجز: ',ask:'أهلًا كابتن أحمد، عندي استفسار عن الحجامة',book:'أهلًا كابتن أحمد، عايز أحجز جلسة حجامة رطبة',cur:'درهم',w1:'حجامة رطبة أساسية',w2:'حجامة رطبة شاملة'},
+en:{hi:'Hi Coach Ahmed, I would like to book: ',ask:'Hi Coach Ahmed, I have a question about hijama',book:'Hi Coach Ahmed, I would like to book a wet cupping session',cur:'AED',w1:'Wet Cupping - Basic',w2:'Wet Cupping - Complete'}
+};
+var DOC={ar:'الحجامة الرطبة | دليل العناية الكامل · كابتن أحمد ماهر',en:'Hijama | The Complete Care Guide · Coach Ahmed Maher'};
+function apply(lang){
+  /* this page is in Arabic & English; Urdu/Hindi visitors get English */
+  var show = lang==='ar' ? 'ar' : 'en';
+  document.documentElement.lang=show;
+  document.documentElement.dir= show==='ar' ? 'rtl':'ltr';
+  document.title=DOC[show];
+  var m=MSG[show];
+  document.querySelectorAll('[data-wa]').forEach(function(a){
+    var k=a.getAttribute('data-wa'), p=a.getAttribute('data-price');
+    var text = p ? m.hi + m[k] + ' (' + p + ' ' + m.cur + ')' : m[k];
+    a.href='https://wa.me/'+PHONE+'?text='+encodeURIComponent(text);
+    a.target='_blank'; a.rel='noopener';
+  });
+  document.querySelectorAll('.langs button').forEach(function(b){
+    b.setAttribute('aria-pressed', b.getAttribute('data-set')===show ? 'true':'false');
+  });
+  return show;
+}
+var btn=document.querySelector('.lang-btn'), menu=document.getElementById('langMenu');
+function openMenu(o){ menu.hidden=!o; btn.setAttribute('aria-expanded', o?'true':'false'); }
+btn.addEventListener('click',function(e){ e.stopPropagation(); openMenu(menu.hidden); });
+document.addEventListener('click',function(e){ if(!menu.hidden && !menu.contains(e.target)) openMenu(false); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape' && !menu.hidden){ openMenu(false); btn.focus(); } });
+document.querySelectorAll('.langs button').forEach(function(b){
+  b.addEventListener('click',function(){
+    var l=b.getAttribute('data-set'); apply(l);
+    try{ localStorage.setItem('lang',l); }catch(e){}
+    openMenu(false);
+  });
+});
+var start='ar';
+try{ start = new URLSearchParams(location.search).get('lang') || localStorage.getItem('lang') || 'ar'; }catch(e){}
+apply(start);
+})();
+</script>
+</body>
+</html>
