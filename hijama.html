@@ -101,6 +101,48 @@ html[dir="rtl"] .back svg{transform:scaleX(-1)}
 .toc a:hover{background:var(--surface-2)}
 .toc a b{font-family:'Readex Pro',sans-serif;font-weight:700;font-size:14px;color:var(--accent);min-width:22px}
 
+/* guide accordion */
+.guide-head{margin:8px 0 14px}
+.guide-title{margin:0 0 10px;font-family:var(--display);font-weight:600;font-size:24px}
+.tap-hint{display:flex;align-items:flex-start;gap:12px;margin:0;padding:14px 16px;border-radius:14px;background:rgba(217,255,74,.08);border:1px dashed var(--accent);font-size:15px;line-height:1.7;color:var(--text)}
+.tap-hint svg{width:26px;height:26px;flex-shrink:0;color:var(--accent);animation:tap 1.6s ease-in-out infinite}
+.tap-hint b{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-family:'Readex Pro',sans-serif;font-size:15px;line-height:1;vertical-align:middle}
+@keyframes tap{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.guide{display:flex;flex-direction:column;gap:10px;margin-bottom:8px}
+.acc{background:var(--surface);border:1px solid var(--line);border-radius:18px;scroll-margin-top:12px}
+.acc[open]{border-color:var(--chip)}
+.acc>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;min-height:64px;padding:12px 16px;margin:0}
+.acc>summary::-webkit-details-marker{display:none}
+.acc>summary .num{font-size:26px;min-width:34px}
+.acc>summary .t{flex:1;min-width:0;padding:0}
+.acc>summary h2{font-size:18px;line-height:1.4}
+.acc>summary .en{font-size:11px}
+.pm{position:relative;flex-shrink:0;width:34px;height:34px;border-radius:999px;border:1px solid var(--chip)}
+.pm::before,.pm::after{content:"";position:absolute;top:50%;left:50%;width:14px;height:2px;margin:-1px 0 0 -7px;border-radius:2px;background:var(--accent);transition:transform .2s}
+.pm::after{transform:rotate(90deg)}
+.acc[open] .pm{background:var(--accent);border-color:var(--accent)}
+.acc[open] .pm::before,.acc[open] .pm::after{background:var(--on-accent)}
+.acc[open] .pm::after{transform:rotate(0deg)}
+.acc>summary:hover .pm{border-color:var(--accent)}
+.acc-body{padding:2px 18px 22px}
+.acc-body>div>p:first-child{margin-top:0}
+
+/* questions tab: spark running around the border */
+@property --fuse{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes fuse{to{--fuse:360deg}}
+.acc.qa{position:relative;margin-top:8px;border:2px solid transparent;
+  background:linear-gradient(var(--surface),var(--surface)) padding-box,
+             conic-gradient(from var(--fuse),var(--chip) 0 62%,#FF6A1F 80%,#FFC93C 92%,#FFFFFF 99%,var(--chip) 100%) border-box;
+  animation:fuse 2.4s linear infinite}
+.acc.qa::before{content:"";position:absolute;inset:-3px;border-radius:20px;z-index:-1;pointer-events:none;
+  background:conic-gradient(from var(--fuse),transparent 0 70%,#FF6A1F 84%,#FFE27A 96%,transparent 100%);
+  filter:blur(9px);opacity:.85;animation:fuse 2.4s linear infinite}
+.qa-icon{width:34px;height:34px;flex-shrink:0;color:#FFC93C}
+.qa-icon svg{width:34px;height:34px}
+.acc.qa>summary h2{color:var(--text)}
+@media (prefers-reduced-motion:reduce){.acc.qa,.acc.qa::before,.tap-hint svg{animation:none}}
+.gal-sec{margin-top:28px}
+
 /* sections */
 .sec{padding:36px 0;border-top:1px solid var(--line);scroll-margin-top:16px}
 .sec-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:18px}
@@ -228,28 +270,18 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   </p>
 </section>
 
-<nav class="toc" aria-labelledby="tocT">
-  <p class="toc-title" id="tocT"><span data-l="ar">محتوى الدليل</span><span data-l="en">In this guide</span></p>
-  <ol>
-    <li><a href="#s1"><b>01</b><span data-l="ar">أهلًا بك في تجربتك</span><span data-l="en">Welcome</span></a></li>
-    <li><a href="#s2"><b>02</b><span data-l="ar">قبل أن تبدأ</span><span data-l="en">Before you book</span></a></li>
-    <li><a href="#s3"><b>03</b><span data-l="ar">استعد بطريقة صحيحة</span><span data-l="en">Prepare the right way</span></a></li>
-    <li><a href="#s4"><b>04</b><span data-l="ar">ماذا تتوقع أثناء الجلسة؟</span><span data-l="en">What to expect</span></a></li>
-    <li><a href="#s5"><b>05</b><span data-l="ar">الساعات الأولى بعد الحجامة</span><span data-l="en">Your first hours of recovery</span></a></li>
-    <li><a href="#s6"><b>06</b><span data-l="ar">العناية بالجلد</span><span data-l="en">Skin care & healing</span></a></li>
-    <li><a href="#s7"><b>07</b><span data-l="ar">العودة إلى التدريب</span><span data-l="en">Back to training</span></a></li>
-    <li><a href="#s8"><b>08</b><span data-l="ar">متى يجب طلب المساعدة؟</span><span data-l="en">Know the warning signs</span></a></li>
-    <li><a href="#s9"><b>09</b><span data-l="ar">حقائق تستحق أن تعرفها</span><span data-l="en">Facts over myths</span></a></li>
-    <li><a href="#s10"><b>10</b><span data-l="ar">رسالتي إليك</span><span data-l="en">A message from your practitioner</span></a></li>
-  </ol>
-</nav>
-
+<div class="guide-head">
+  <h2 class="guide-title"><span data-l="ar">محتوى الدليل</span><span data-l="en">Inside the guide</span></h2>
+  <p class="tap-hint"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11"/><path d="M12 10.5V9a1.5 1.5 0 0 1 3 0v2"/><path d="M15 10.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-.5a6 6 0 0 1-4.8-2.4L4.4 15.4a1.5 1.5 0 0 1 2.3-2l2.3 2.6"/><path d="M5 5 3.5 3.5M5 9H3M9 2.5V1"/></svg>
+  <span data-l="ar">اضغط على القسم الذي تريد معرفته ليفتح، واضغط على علامة <b>−</b> لإغلاقه واختيار قسم آخر.</span>
+  <span data-l="en">Tap the section you want to read to open it, and tap <b>−</b> to close it and choose another.</span></p>
+</div>
+<div class="guide">
 <!-- 01 -->
-<section class="sec" id="s1">
-  <div class="sec-head"><div class="num">01</div><div class="t">
+<details class="acc" id="s1" name="guide"><summary class="sec-head"><div class="num">01</div><div class="t">
     <h2><span data-l="ar">أهلًا بك في تجربتك</span><span data-l="en">Welcome to Your Session</span></h2>
     <div class="en">Welcome to your session</div>
-  </div></div>
+  </div><span class="pm" aria-hidden="true"></span></summary><div class="acc-body">
   <div data-l="ar">
     <p>الحجامة ممارسة تقليدية عُرفت منذ قرون في ثقافات متعددة.</p>
     <p>وفي الحجامة الرطبة، يُستخدم الشفط مع إحداث فتحات سطحية في الجلد تسمح بخروج كمية من الدم.</p>
@@ -264,14 +296,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     <p class="key">Our goal is to offer a mindful experience that respects your health, comfort and safety.</p>
     <div class="note"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg><p>Hijama is not a substitute for medical diagnosis or prescribed treatment.</p></div>
   </div>
-</section>
+</div></details>
 
 <!-- 02 -->
-<section class="sec" id="s2">
-  <div class="sec-head"><div class="num">02</div><div class="t">
+<details class="acc" id="s2" name="guide"><summary class="sec-head"><div class="num">02</div><div class="t">
     <h2><span data-l="ar">قبل أن تبدأ</span><span data-l="en">Before You Book</span></h2>
     <div class="en">Your health comes first</div>
-  </div></div>
+  </div><span class="pm" aria-hidden="true"></span></summary><div class="acc-body">
   <div data-l="ar">
     <p>قبل تحديد موعد الجلسة، من المهم إخبار الممارس بتاريخك الصحي، خاصة إذا كان لديك:</p>
     <ul>
@@ -306,14 +337,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     <p style="margin-top:16px">Do not stop any prescribed medication on your own for the sake of hijama.</p>
     <p>Some conditions require postponing or avoiding the session, or getting a medical assessment first.</p>
   </div>
-</section>
+</div></details>
 
 <!-- 03 -->
-<section class="sec" id="s3">
-  <div class="sec-head"><div class="num">03</div><div class="t">
+<details class="acc" id="s3" name="guide"><summary class="sec-head"><div class="num">03</div><div class="t">
     <h2><span data-l="ar">استعد بطريقة صحيحة</span><span data-l="en">Prepare the Right Way</span></h2>
     <div class="en">Before your session</div>
-  </div></div>
+  </div><span class="pm" aria-hidden="true"></span></summary><div class="acc-body">
   <div data-l="ar">
     <h3>التغذية والترطيب</h3>
     <p>تناول وجبة خفيفة ومتوازنة قبل الجلسة بوقت مناسب، وتجنب الحضور وأنت تشعر بجوع شديد أو دوخة.</p>
@@ -342,14 +372,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     <p>Get enough sleep, and tell the practitioner if you feel unusually tired, have an acute illness or a raised temperature.</p>
     <p class="key">Remember: good preparation starts with being honest about your health, not with following a long list of don'ts.</p>
   </div>
-</section>
+</div></details>
 
 <!-- 04 -->
-<section class="sec" id="s4">
-  <div class="sec-head"><div class="num">04</div><div class="t">
+<details class="acc" id="s4" name="guide"><summary class="sec-head"><div class="num">04</div><div class="t">
     <h2><span data-l="ar">ماذا تتوقع أثناء الجلسة؟</span><span data-l="en">What to Expect During the Session</span></h2>
     <div class="en">What to expect</div>
-  </div></div>
+  </div><span class="pm" aria-hidden="true"></span></summary><div class="acc-body">
   <div data-l="ar">
     <p>قبل البدء، تُراجع حالتك الصحية ومدى ملاءمة الإجراء لك، وتُشرح لك خطوات الجلسة والمخاطر المحتملة.</p>
     <p>قد تشعر بشدّ في الجلد نتيجة الشفط، أو بوخز وانزعاج أثناء الجزء المتعلق بفتح الجلد.</p>
@@ -380,14 +409,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     </div>
     <p class="key">Your comfort matters. You can ask to stop the session at any time.</p>
   </div>
-</section>
+</div></details>
 
 <!-- 05 -->
-<section class="sec" id="s5">
-  <div class="sec-head"><div class="num">05</div><div class="t">
+<details class="acc" id="s5" name="guide"><summary class="sec-head"><div class="num">05</div><div class="t">
     <h2><span data-l="ar">الساعات الأولى بعد الحجامة</span><span data-l="en">Your First Hours of Recovery</span></h2>
     <div class="en">Your first hours of recovery</div>
-  </div></div>
+  </div><span class="pm" aria-hidden="true"></span></summary><div class="acc-body">
   <div data-l="ar">
     <p>بعد الحجامة الرطبة، يحتاج الجلد إلى العناية لأن مواضع التطبيق تتضمن فتحات صغيرة.</p>
     <h3><span class="step">1</span>اهتم بالترطيب</h3>
@@ -416,14 +444,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     <h3><span class="step">4</span>Don't rush back to effort</h3>
     <p>Avoid intense exercise and direct friction on the cupping spots until any bleeding has completely stopped and the wounds have begun to heal properly.</p>
   </div>
-</section>
+</div></details>
 
 <!-- 06 -->
-<section class="sec" id="s6">
-  <div class="sec-head"><div class="num">06</div><div class="t">
+<details class="acc" id="s6" name="guide"><summary class="sec-head"><div class="num">06</div><div class="t">
     <h2><span data-l="ar">العناية بالجلد</span><span data-l="en">Skin Care & Healing</span></h2>
     <div class="en">Skin care &amp; healing</div>
-  </div></div>
+  </div><span class="pm" aria-hidden="true"></span></summary><div class="acc-body">
   <div data-l="ar">
     <p>من الطبيعي أن تظهر بعض العلامات المؤقتة على الجلد بعد الحجامة.</p>
     <p>وقد تشعر بحساسية بسيطة أو انزعاج موضعي خلال فترة التعافي.</p>
@@ -452,14 +479,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     <p>You can shower once the wounds and dressings allow it, following the care instructions you were given, while avoiding rubbing or soaking the area.</p>
     <div class="note"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg><p><strong>Important:</strong> If the wounds are not improving, or the pain is increasing instead of easing, don't ignore it.</p></div>
   </div>
-</section>
+</div></details>
 
 <!-- 07 -->
-<section class="sec" id="s7">
-  <div class="sec-head"><div class="num">07</div><div class="t">
+<details class="acc" id="s7" name="guide"><summary class="sec-head"><div class="num">07</div><div class="t">
     <h2><span data-l="ar">العودة إلى التدريب</span><span data-l="en">Back to Training</span></h2>
     <div class="en">Back to training</div>
-  </div></div>
+  </div><span class="pm" aria-hidden="true"></span></summary><div class="acc-body">
   <div data-l="ar">
     <p>إذا كنت شخصًا نشطًا أو رياضيًا، فلا داعي للتعامل مع الحجامة وكأنها اختبار لتحملك.</p>
     <p>لا توجد مدة واحدة مثبتة علميًا تصلح لجميع الأشخاص للعودة إلى التمارين بعد الحجامة الرطبة.</p>
@@ -488,14 +514,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     <p class="key">The most important rule: don't start intense training until you are sure you are stable and the cupping spots are protected.</p>
     <p style="margin-top:16px">If unusual symptoms appear, get a medical assessment before returning to training.</p>
   </div>
-</section>
+</div></details>
 
 <!-- 08 -->
-<section class="sec" id="s8">
-  <div class="sec-head"><div class="num">08</div><div class="t">
+<details class="acc" id="s8" name="guide"><summary class="sec-head"><div class="num">08</div><div class="t">
     <h2><span data-l="ar">متى يجب طلب المساعدة؟</span><span data-l="en">When to Get Help</span></h2>
     <div class="en">Know the warning signs</div>
-  </div></div>
+  </div><span class="pm" aria-hidden="true"></span></summary><div class="acc-body">
   <div data-l="ar">
     <p>بعض الأعراض تستدعي تقييمًا طبيًا بدلًا من انتظار اختفائها.</p>
     <div class="alert-box">
@@ -542,14 +567,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     </div>
     <p style="margin-top:16px">A real rise in body temperature after hijama is not a sign of toxins leaving the body or of the immune system being activated, and it should not be ignored.</p>
   </div>
-</section>
+</div></details>
 
 <!-- 09 -->
-<section class="sec" id="s9">
-  <div class="sec-head"><div class="num">09</div><div class="t">
+<details class="acc" id="s9" name="guide"><summary class="sec-head"><div class="num">09</div><div class="t">
     <h2><span data-l="ar">حقائق تستحق أن تعرفها</span><span data-l="en">Facts Worth Knowing</span></h2>
     <div class="en">Hijama: facts over myths</div>
-  </div></div>
+  </div><span class="pm" aria-hidden="true"></span></summary><div class="acc-body">
   <div class="faq" data-l="ar">
     <details><summary>هل الدم الخارج من الحجامة دم فاسد؟</summary><div class="ans"><p><b>لا.</b> لا يوجد تصنيف طبي معتمد يسمى «الدم الفاسد» بهذا المعنى. ولا يثبت لون الدم أو كميته وجود سموم في الجسم.</p></div></details>
     <details><summary>هل خروج دم أكثر يعني نتيجة أفضل؟</summary><div class="ans"><p><b>لا.</b> كمية الدم الخارجة ليست مقياسًا مثبتًا لنجاح الجلسة أو فعاليتها.</p></div></details>
@@ -564,31 +588,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     <details><summary>Does everyone need regular hijama?</summary><div class="ans"><p>There is no general medical recommendation requiring healthy people to have regular hijama.</p></div></details>
     <details><summary>Can hijama replace physiotherapy or medication?</summary><div class="ans"><p><b>No.</b> It can be discussed as a complementary practice in some cases, but it does not replace proven medical treatments.</p></div></details>
   </div>
-</section>
-
-<!-- gallery -->
-<section class="sec" aria-labelledby="galT">
-  <div class="sec-head"><div class="t">
-    <h2 id="galT"><span data-l="ar">من الجلسات</span><span data-l="en">From the sessions</span></h2>
-  </div></div>
-  <div class="gallery">
-    <button type="button" class="g-item g-a" data-full="hijama-1.webp"><img src="hijama-1.webp" width="1200" height="900" loading="lazy" alt="كاسات حجامة شفط على الظهر"></button>
-    <button type="button" class="g-item g-b" data-full="hijama-2.webp"><img src="hijama-2.webp" width="1200" height="900" loading="lazy" alt="جلسة حجامة بكاسات شفط وكاسات سيليكون على الظهر"></button>
-    <button type="button" class="g-item g-c" data-full="hijama-3.webp"><img src="hijama-3.webp" width="900" height="1200" loading="lazy" alt="كاسات الحجامة الرطبة على الظهر أثناء الجلسة"></button>
-  </div>
-  <p class="g-hint"><span data-l="ar">اضغط على أي صورة لتكبيرها</span><span data-l="en">Tap any photo to enlarge</span></p>
-  <dialog class="viewer" id="viewer" aria-label="صورة مكبرة">
-    <img id="viewerImg" src="" alt="">
-    <button type="button" class="v-close" aria-label="إغلاق / Close"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-  </dialog>
-</section>
+</div></details>
 
 <!-- 10 -->
-<section class="sec" id="s10">
-  <div class="sec-head"><div class="num">10</div><div class="t">
+<details class="acc" id="s10" name="guide"><summary class="sec-head"><div class="num">10</div><div class="t">
     <h2><span data-l="ar">رسالتي إليك</span><span data-l="en">My Message to You</span></h2>
     <div class="en">A message from your practitioner</div>
-  </div></div>
+  </div><span class="pm" aria-hidden="true"></span></summary><div class="acc-body">
   <div class="msg">
     <div data-l="ar">
       <p>أؤمن أن العناية الحقيقية بالصحة تبدأ بالمعرفة، وليس بالمبالغة في الوعود.</p>
@@ -614,10 +620,39 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       </a>
     </div>
   </div>
+</div></details>
+<!-- questions -->
+<details class="acc qa" id="questions" name="guide"><summary class="sec-head">
+  <span class="qa-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.6 2.6 0 0 1 5 .9c0 1.7-2.5 2.3-2.5 3.9"/><path d="M12 17.2h.01"/></svg></span>
+  <div class="t"><h2><span data-l="ar">الأسئلة التي يجب الإجابة عليها بنفسك قبل حجز جلسة الحجامة الرطبة</span><span data-l="en">Questions to answer yourself before booking a wet cupping session</span></h2></div>
+  <span class="pm" aria-hidden="true"></span></summary>
+  <div class="acc-body">
+    <p data-l="ar">سيتم إضافة الأسئلة قريبًا.</p>
+    <p data-l="en">Questions coming soon.</p>
+  </div>
+</details>
+</div>
 
-  <p class="disclaimer" data-l="ar">تنويه: هذا الدليل للتثقيف والعناية العامة، ولا يحل محل التقييم الطبي الفردي. يجب إجراء الحجامة الرطبة فقط ضمن نطاق التأهيل والترخيص المعمول به في بلد الممارسة، وباستخدام إجراءات معتمدة للوقاية من العدوى.</p>
-  <p class="disclaimer" data-l="en">Disclaimer: This guide is for education and general care, and does not replace an individual medical assessment. Wet cupping should only be performed within the qualifications and licensing in force in the country of practice, using approved infection-prevention procedures.</p>
+<!-- gallery -->
+<section class="sec gal-sec" aria-labelledby="galT">
+  <div class="sec-head"><div class="t">
+    <h2 id="galT"><span data-l="ar">من الجلسات</span><span data-l="en">From the sessions</span></h2>
+  </div></div>
+  <div class="gallery">
+    <button type="button" class="g-item g-a" data-full="hijama-1.webp"><img src="hijama-1.webp" width="1200" height="900" loading="lazy" alt="كاسات حجامة شفط على الظهر"></button>
+    <button type="button" class="g-item g-b" data-full="hijama-2.webp"><img src="hijama-2.webp" width="1200" height="900" loading="lazy" alt="جلسة حجامة بكاسات شفط وكاسات سيليكون على الظهر"></button>
+    <button type="button" class="g-item g-c" data-full="hijama-3.webp"><img src="hijama-3.webp" width="900" height="1200" loading="lazy" alt="كاسات الحجامة الرطبة على الظهر أثناء الجلسة"></button>
+  </div>
+  <p class="g-hint"><span data-l="ar">اضغط على أي صورة لتكبيرها</span><span data-l="en">Tap any photo to enlarge</span></p>
+  <dialog class="viewer" id="viewer" aria-label="صورة مكبرة">
+    <img id="viewerImg" src="" alt="">
+    <button type="button" class="v-close" aria-label="إغلاق / Close"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </dialog>
 </section>
+
+<p class="disclaimer" data-l="ar">تنويه: هذا الدليل للتثقيف والعناية العامة، ولا يحل محل التقييم الطبي الفردي. يجب إجراء الحجامة الرطبة فقط ضمن نطاق التأهيل والترخيص المعمول به في بلد الممارسة، وباستخدام إجراءات معتمدة للوقاية من العدوى.</p>
+<p class="disclaimer" data-l="en">Disclaimer: This guide is for education and general care, and does not replace an individual medical assessment. Wet cupping should only be performed within the qualifications and licensing in force in the country of practice, using approved infection-prevention procedures.</p>
+
 
 </main>
 
@@ -674,6 +709,16 @@ document.querySelectorAll('.g-item').forEach(function(g){
 });
 viewer.querySelector('.v-close').addEventListener('click',function(){ viewer.close(); });
 viewer.addEventListener('click',function(e){ if(e.target===viewer) viewer.close(); });
+/* opening one tab closes the others and brings it into view */
+var accs=[].slice.call(document.querySelectorAll('.acc'));
+accs.forEach(function(d){
+  d.addEventListener('toggle',function(){
+    if(!d.open) return;
+    accs.forEach(function(o){ if(o!==d && o.open) o.open=false; });
+    var r=d.getBoundingClientRect();
+    if(r.top<0 || r.top>window.innerHeight*0.4) d.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
 var start='ar';
 try{ start = new URLSearchParams(location.search).get('lang') || localStorage.getItem('lang') || 'ar'; }catch(e){}
 apply(start);
