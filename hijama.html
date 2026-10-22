@@ -140,10 +140,19 @@ html[dir="rtl"] .back svg{transform:scaleX(-1)}
 .faq .ans p{margin:0;font-size:16px}
 .faq .ans b{color:var(--accent);font-family:var(--display)}
 
-/* gallery */
-.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.gallery .photo{aspect-ratio:1/1}
-.gallery .photo:first-child{grid-column:1 / -1;aspect-ratio:16/9}
+.hero-img{display:block;width:100%;height:auto;border-radius:20px;margin-bottom:28px;background:var(--surface)}
+
+/* gallery: two landscape photos stacked + one portrait beside them */
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"a c" "b c";gap:8px;align-items:stretch}
+.g-a{grid-area:a}.g-b{grid-area:b}.g-c{grid-area:c}
+.g-item{display:block;padding:0;border:0;border-radius:14px;overflow:hidden;background:#121416;cursor:zoom-in}
+.g-item img{display:block;width:100%;height:100%;object-fit:contain}
+.g-hint{margin:10px 0 0;font-size:13px;color:var(--muted-2);text-align:center}
+.viewer{padding:0;border:0;background:transparent;max-width:min(96vw,1200px);max-height:92vh;overflow:visible}
+.viewer::backdrop{background:rgba(8,9,10,.92)}
+.viewer img{display:block;max-width:min(96vw,1200px);max-height:88vh;width:auto;height:auto;border-radius:14px}
+.v-close{position:absolute;top:-56px;inset-inline-end:0;width:48px;height:48px;border-radius:999px;border:1px solid var(--chip);background:var(--surface);color:var(--text);display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.v-close svg{width:22px;height:22px}
 
 /* message */
 .msg{background:var(--surface);border-radius:22px;padding:24px;border:1px solid var(--line)}
@@ -192,10 +201,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   <p class="quote" data-l="en">Good care doesn't begin when the cup goes on, and it doesn't end when it comes off.</p>
 </header>
 
-<div class="photo hero-photo" role="img" aria-label="مكان صورة رئيسية">
-  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-8 8"/></svg>
-  <span data-l="ar">صورة رئيسية للحجامة</span><span data-l="en">Main hijama photo</span>
-</div>
+<img class="hero-img" src="hijama-hero.webp" width="1600" height="900" fetchpriority="high" alt="رجل جالس بعد جلسة حجامة وكاسات على كتفيه، وحوله أيقونات العناية: الماء، النظافة، الأكل الصحي، النوم، الضمادة، والمشي">
 
 <section class="price-card" aria-labelledby="prices">
   <h2 id="prices"><span data-l="ar">جلسات الحجامة الرطبة</span><span data-l="en">Wet Cupping Sessions</span></h2>
@@ -566,10 +572,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     <h2 id="galT"><span data-l="ar">من الجلسات</span><span data-l="en">From the sessions</span></h2>
   </div></div>
   <div class="gallery">
-    <div class="photo" role="img" aria-label="مكان صورة"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-8 8"/></svg><span data-l="ar">صورة 1</span><span data-l="en">Photo 1</span></div>
-    <div class="photo" role="img" aria-label="مكان صورة"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-8 8"/></svg><span data-l="ar">صورة 2</span><span data-l="en">Photo 2</span></div>
-    <div class="photo" role="img" aria-label="مكان صورة"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M21 16l-5-5-8 8"/></svg><span data-l="ar">صورة 3</span><span data-l="en">Photo 3</span></div>
+    <button type="button" class="g-item g-a" data-full="hijama-1.webp"><img src="hijama-1.webp" width="1200" height="900" loading="lazy" alt="كاسات حجامة شفط على الظهر"></button>
+    <button type="button" class="g-item g-b" data-full="hijama-2.webp"><img src="hijama-2.webp" width="1200" height="900" loading="lazy" alt="جلسة حجامة بكاسات شفط وكاسات سيليكون على الظهر"></button>
+    <button type="button" class="g-item g-c" data-full="hijama-3.webp"><img src="hijama-3.webp" width="900" height="1200" loading="lazy" alt="كاسات الحجامة الرطبة على الظهر أثناء الجلسة"></button>
   </div>
+  <p class="g-hint"><span data-l="ar">اضغط على أي صورة لتكبيرها</span><span data-l="en">Tap any photo to enlarge</span></p>
+  <dialog class="viewer" id="viewer" aria-label="صورة مكبرة">
+    <img id="viewerImg" src="" alt="">
+    <button type="button" class="v-close" aria-label="إغلاق / Close"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </dialog>
 </section>
 
 <!-- 10 -->
@@ -653,6 +664,16 @@ document.querySelectorAll('.langs button').forEach(function(b){
     openMenu(false);
   });
 });
+var viewer=document.getElementById('viewer'), vImg=document.getElementById('viewerImg');
+document.querySelectorAll('.g-item').forEach(function(g){
+  g.addEventListener('click',function(){
+    var im=g.querySelector('img');
+    vImg.src=g.getAttribute('data-full'); vImg.alt=im.alt;
+    if(viewer.showModal) viewer.showModal(); else window.open(vImg.src,'_blank');
+  });
+});
+viewer.querySelector('.v-close').addEventListener('click',function(){ viewer.close(); });
+viewer.addEventListener('click',function(e){ if(e.target===viewer) viewer.close(); });
 var start='ar';
 try{ start = new URLSearchParams(location.search).get('lang') || localStorage.getItem('lang') || 'ar'; }catch(e){}
 apply(start);
