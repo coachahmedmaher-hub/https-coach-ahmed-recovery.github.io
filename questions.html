@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>استبيان التقييم الصحي قبل الحجامة الرطبة · كابتن أحمد ماهر</title>
+<meta name="description" content="استبيان التقييم الصحي قبل جلسة الحجامة الرطبة مع كابتن أحمد ماهر.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#111315">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@500;600;700&display=swap">
+<style>
+:root{
+  --bg:#111315;--surface:#1B1E21;--surface-2:#24282C;--line:#2A2E32;--chip:#3A3F44;
+  --text:#F4F4EF;--text-2:#E6E8E3;--muted:#B4B9B5;--muted-2:#A3A8A4;
+  --accent:#D9FF4A;--on-accent:#111315;
+  --warn:#FFB547;--warn-bg:#2A2112;--danger:#FF7A7A;--danger-bg:#2C1516;
+  --display:'Readex Pro','IBM Plex Sans Arabic',sans-serif;
+  --body:'IBM Plex Sans Arabic','Readex Pro',sans-serif;
+}
+html[lang="en"]{--display:'Readex Pro',sans-serif;--body:'Readex Pro',sans-serif}
+html[lang="ar"] [data-l="en"],html[lang="en"] [data-l="ar"]{display:none !important}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.7}
+a{color:inherit}
+[hidden]{display:none !important}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px 80px}
+@media (min-width:600px){.wrap{padding:28px 32px 80px}}
+
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:28px}
+.back{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px 0 12px;border-radius:999px;border:1px solid var(--chip);background:var(--surface);text-decoration:none;font-size:15px;font-weight:500;color:var(--text-2)}
+.back svg{width:20px;height:20px;color:var(--accent)}
+html[dir="rtl"] .back svg{transform:scaleX(-1)}
+.lang{position:relative}
+.lang-btn{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid var(--chip);background:var(--surface);color:var(--accent);cursor:pointer;padding:0}
+.lang-btn svg{width:22px;height:22px}
+.langs{position:absolute;top:52px;inset-inline-end:0;z-index:30;min-width:160px;margin:0;padding:6px;list-style:none;background:var(--surface);border:1px solid var(--chip);border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.5)}
+.langs button{width:100%;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 14px;border:0;border-radius:10px;background:transparent;color:var(--text-2);font-size:16px;font-weight:500;cursor:pointer;text-align:start}
+.langs button:hover{background:var(--surface-2)}
+.langs button[lang="ar"]{font-family:'IBM Plex Sans Arabic',sans-serif}
+.langs button[lang="en"]{font-family:'Readex Pro',sans-serif}
+.langs button[aria-pressed="true"]{color:var(--accent);font-weight:600}
+.langs button[aria-pressed="true"]::after{content:"✓"}
+
+.hero{display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+.eyebrow{font-family:'Readex Pro',sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
+.hero h1{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(28px,7.5vw,40px);line-height:1.3}
+.by{font-family:'Readex Pro',sans-serif;font-size:13px;font-weight:600;letter-spacing:.12em;color:var(--muted)}
+.bar{width:64px;height:5px;background:var(--accent);border-radius:3px;margin:6px 0 2px}
+
+/* responsibility notice */
+.resp{margin:0 0 24px;padding:18px;border-radius:18px;background:var(--danger-bg);border:2px solid var(--danger)}
+.resp .rh{display:flex;align-items:center;gap:10px;margin:0 0 8px;font-family:var(--display);font-weight:700;font-size:19px;color:var(--danger)}
+.resp .rh svg{width:26px;height:26px;flex-shrink:0}
+.resp p{margin:0;font-size:16px;line-height:1.8;color:var(--text)}
+.resp p+p{margin-top:8px}
+.resp b{color:#FFB3B3}
+
+.intro{margin:0 0 20px;color:var(--muted);font-size:15px}
+
+/* progress */
+.progress{position:sticky;top:0;z-index:20;margin:0 -16px 20px;padding:10px 16px;background:rgba(17,19,21,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.progress .pt{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:6px}
+.progress .pt b{color:var(--accent);font-family:'Readex Pro',sans-serif}
+.progress .track{height:6px;border-radius:999px;background:var(--line);overflow:hidden}
+.progress .fill{height:100%;width:0;background:var(--accent);border-radius:999px;transition:width .25s}
+
+/* sections & questions */
+.sec{margin:0 0 28px}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin:0 0 12px}
+.num{font-family:'Readex Pro',sans-serif;font-weight:700;font-size:34px;line-height:1;color:var(--accent);flex-shrink:0}
+.sec-head h2{margin:0;font-family:var(--display);font-weight:600;font-size:22px;line-height:1.3}
+.sec-head .en{font-family:'Readex Pro',sans-serif;font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--muted-2);text-transform:uppercase}
+.q{margin:0 0 10px;padding:16px;border-radius:16px;background:var(--surface);border:1px solid var(--line);scroll-margin-top:90px}
+.q.err{border-color:var(--danger);background:#211517}
+.q legend,.q .ql{display:block;width:100%;padding:0;margin:0 0 12px;font-size:16px;font-weight:600;line-height:1.7;color:var(--text)}
+.q fieldset{border:0;margin:0;padding:0;min-width:0}
+.qn{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 6px;margin-inline-end:8px;border-radius:8px;background:var(--surface-2);color:var(--accent);font-family:'Readex Pro',sans-serif;font-size:13px;font-weight:700;vertical-align:1px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative;display:inline-flex}
+.opt input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.opt span{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:76px;padding:0 18px;border-radius:999px;border:1px solid var(--chip);background:var(--bg);font-size:15px;font-weight:500;color:var(--text-2);cursor:pointer;user-select:none}
+.opt span:hover{border-color:var(--muted-2)}
+.opt input:checked+span{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:700}
+.opt input:focus-visible+span{outline:3px solid var(--accent);outline-offset:3px}
+.field{display:block;width:100%;min-height:48px;padding:12px 14px;border-radius:12px;border:1px solid var(--chip);background:var(--bg);color:var(--text);font:inherit;font-size:16px}
+textarea.field{min-height:110px;resize:vertical;line-height:1.7}
+.field:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(217,255,74,.18)}
+input[type="date"].field{color-scheme:dark}
+.hint{margin:8px 0 0;font-size:13px;color:var(--muted-2)}
+.req-note{margin:10px 0 0;padding:10px 12px;border-radius:10px;background:var(--warn-bg);border:1px solid var(--warn);font-size:14px;color:var(--text)}
+.emsg{margin:10px 0 0;font-size:14px;font-weight:600;color:var(--danger)}
+.detail{margin-top:12px}
+
+/* submit */
+.submit{margin-top:8px;padding:20px;border-radius:20px;background:var(--surface);border:1px solid var(--chip)}
+.ack{display:flex;align-items:flex-start;gap:12px;cursor:pointer;font-size:15px;line-height:1.75}
+.ack input{width:24px;height:24px;flex-shrink:0;margin:3px 0 0;accent-color:var(--accent);cursor:pointer}
+.ack.err{color:#FFB3B3}
+.send{margin-top:18px;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:64px;padding:10px 16px;border:0;border-radius:18px;background:#25D366;color:#062E16;font-family:var(--display);cursor:pointer}
+.send:hover{background:#2EE875}
+.send .s1{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px}
+.send .s1 svg{width:28px;height:28px}
+.send .s2{font-size:13px;font-weight:500}
+.form-err{margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--danger-bg);border:1px solid var(--danger);font-size:15px}
+.done{margin-top:8px;padding:22px;border-radius:20px;background:#0F2416;border:2px solid #25D366;text-align:center}
+.done h2{margin:0 0 8px;font-family:var(--display);font-size:22px;color:#5BE58E}
+.done p{margin:0 0 14px;color:var(--text-2)}
+.done .row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 18px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;border:1px solid var(--chip);background:var(--surface);color:var(--text)}
+.btn.green{background:#25D366;border-color:#25D366;color:#062E16}
+.btn.lime{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn svg{width:20px;height:20px}
+
+/* ===== review / report mode ===== */
+.review-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:0 0 16px}
+.review-bar p{margin:0;font-size:14px;color:var(--muted)}
+.report{background:#FFFFFF;color:#16181A;border-radius:14px;padding:28px 24px;font-family:'IBM Plex Sans Arabic',sans-serif;line-height:1.7}
+.report .r-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;border-bottom:3px solid #16181A;padding-bottom:14px;margin-bottom:16px}
+.report .r-eyebrow{font-family:'Readex Pro',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;color:#5A6B00}
+.report h1{margin:4px 0 2px;font-size:22px;line-height:1.35}
+.report .r-by{font-family:'Readex Pro',sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;color:#555}
+.report .r-date{font-size:12px;color:#555;text-align:end;white-space:nowrap}
+.report .r-sum{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px;padding:12px 14px;border-radius:10px;background:#F3F4F1;margin-bottom:12px;font-size:14px}
+.report .r-sum div span{display:block;font-size:11px;color:#666}
+.report .r-sum div b{font-size:15px;word-break:break-word}
+.report .r-flags{padding:12px 14px;border-radius:10px;margin-bottom:16px;font-size:14px}
+.report .r-flags.has{background:#FFF1DD;border:1px solid #E08A00}
+.report .r-flags.none{background:#E9F8EE;border:1px solid #2E9E5B}
+.report .r-flags b{display:block;margin-bottom:2px}
+.report h2{margin:18px 0 8px;font-size:15px;padding:6px 10px;border-radius:6px;background:#16181A;color:#FFFFFF}
+.report .r-q{display:flex;justify-content:space-between;gap:14px;padding:8px 10px;border-bottom:1px solid #E3E5E0;font-size:13.5px;break-inside:avoid;page-break-inside:avoid}
+.report .r-q .rq{flex:1;min-width:0}
+.report .r-q .rq i{font-style:normal;font-weight:700;color:#5A6B00;margin-inline-end:6px;font-family:'Readex Pro',sans-serif}
+.report .r-q .ra{flex-shrink:0;max-width:45%;font-weight:700;text-align:end;word-break:break-word}
+.report .r-q.long{flex-direction:column;gap:4px}
+.report .r-q.long .ra{max-width:none;text-align:start;font-weight:500;background:#F6F7F4;padding:8px 10px;border-radius:6px;white-space:pre-wrap}
+.report .r-q.flag{background:#FFF1DD}
+.report .r-q.flag .ra{color:#A85F00}
+.report .r-ack{margin-top:18px;padding:12px 14px;border:2px solid #C62828;border-radius:10px;font-size:13px;background:#FFF5F5;break-inside:avoid;page-break-inside:avoid}
+.report .r-ack b{color:#C62828}
+.report .r-foot{margin-top:16px;padding-top:10px;border-top:1px solid #DDD;font-family:'Readex Pro',sans-serif;font-size:11px;color:#666;display:flex;justify-content:space-between;gap:10px}
+.bad-link{padding:20px;border-radius:16px;background:var(--danger-bg);border:1px solid var(--danger)}
+@media print{
+  body{background:#fff}
+  .topbar,.review-bar{display:none !important}
+  .wrap{max-width:none;padding:0}
+  .report{border-radius:0;padding:0}
+}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<div class="topbar">
+  <a class="back" href="hijama.html">
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    <span data-l="ar">دليل الحجامة</span><span data-l="en">Hijama guide</span>
+  </a>
+  <div class="lang">
+    <button type="button" class="lang-btn" aria-label="Language / اللغة" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+    </button>
+    <ul class="langs" id="langMenu" hidden>
+      <li><button type="button" lang="ar" data-set="ar" aria-pressed="true">العربية</button></li>
+      <li><button type="button" lang="en" data-set="en" aria-pressed="false">English</button></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ FORM MODE ============ -->
+<div id="formMode">
+  <header class="hero">
+    <div class="eyebrow">Hijama · Pre-session health assessment</div>
+    <h1><span data-l="ar">استبيان التقييم الصحي قبل الحجامة الرطبة</span><span data-l="en">Health Assessment Before Wet Cupping</span></h1>
+    <div class="bar"></div>
+    <div class="by">COACH AHMED MAHER · SPORTS RECOVERY</div>
+  </header>
+
+  <section class="resp" aria-labelledby="respT">
+    <p class="rh" id="respT"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>
+      <span data-l="ar">ملاحظة هامة قبل البدء</span><span data-l="en">Important notice before you start</span></p>
+    <div data-l="ar">
+      <p>أنت <b>المسؤول مسؤولية كاملة</b> عن صحة ودقة جميع الإجابات التي تقدمها في هذا الاستبيان، ويعتمد قرار إجراء الجلسة على هذه المعلومات.</p>
+      <p>في حال إخفاء أي معلومة صحية، أو تقديم معلومات غير صحيحة أو غير مكتملة، أو اكتشاف حالات أو معلومات أخرى لم يتم الإفصاح عنها، <b>يُخلي الممارس (كابتن أحمد ماهر) مسؤوليته</b> عن أي مضاعفات أو أضرار تنتج عن ذلك.</p>
+    </div>
+    <div data-l="en">
+      <p>You are <b>fully responsible</b> for the accuracy and completeness of every answer you give in this questionnaire, and the decision to go ahead with the session depends on this information.</p>
+      <p>If any health information is withheld, if incorrect or incomplete information is given, or if other conditions or information that were not disclosed are discovered, <b>the practitioner (Coach Ahmed Maher) is not responsible</b> for any complications or harm resulting from that.</p>
+    </div>
+  </section>
+
+  <p class="intro" data-l="ar">أجب على جميع الأسئلة، ثم اضغط «أنهيت الإجابات» في آخر الصفحة لإرسال إجاباتك إلى كابتن أحمد على واتساب. إجاباتك لا تُحفظ على الموقع.</p>
+  <p class="intro" data-l="en">Answer all questions, then tap “I've finished” at the end of the page to send your answers to Coach Ahmed on WhatsApp. Your answers are not stored on this website.</p>
+
+  <div class="progress" aria-live="polite">
+    <div class="pt"><span data-l="ar">تقدّمك</span><span data-l="en">Your progress</span><span><b id="pDone">0</b> / <span id="pTotal">27</span></span></div>
+    <div class="track"><div class="fill" id="pFill"></div></div>
+  </div>
+
+  <form id="form" novalidate>
+    <div id="sections"></div>
+
+    <div class="submit" id="submitBox">
+      <label class="ack" id="ackLabel">
+        <input type="checkbox" id="ack">
+        <span>
+          <span data-l="ar">قرأت الملاحظة الموجودة أعلى الصفحة، وأقر بأن جميع إجاباتي صحيحة وكاملة، وأتحمل المسؤولية الكاملة عنها.</span>
+          <span data-l="en">I have read the notice at the top of this page. I confirm that all my answers are true and complete, and I take full responsibility for them.</span>
+        </span>
+      </label>
+      <button type="submit" class="send">
+        <span class="s1"><svg aria-hidden="true" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/><path fill="#25D366" d="M9.2 7.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.3 3.6 5.6 4.9 2.8 1.1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4l-2-1c-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2z"/></svg>
+          <span data-l="ar">أنهيت الإجابات</span><span data-l="en">I've finished</span></span>
+        <span class="s2"><span data-l="ar">سيتم إرسال إجاباتك إلى كابتن أحمد على واتساب</span><span data-l="en">Your answers will be sent to Coach Ahmed on WhatsApp</span></span>
+      </button>
+      <div class="form-err" id="formErr" role="alert" hidden></div>
+    </div>
+
+    <div class="done" id="done" hidden>
+      <h2><span data-l="ar">إجاباتك جاهزة للإرسال</span><span data-l="en">Your answers are ready to send</span></h2>
+      <p data-l="ar">فتحنا لك واتساب برسالة فيها إجاباتك. اضغط <b>إرسال</b> داخل واتساب لإتمام الإرسال.</p>
+      <p data-l="en">We opened WhatsApp with a message containing your answers. Tap <b>Send</b> in WhatsApp to complete.</p>
+      <div class="row">
+        <a class="btn green" id="waAgain" href="#" target="_blank" rel="noopener"><span data-l="ar">واتساب لم يفتح؟ اضغط هنا</span><span data-l="en">WhatsApp didn't open? Tap here</span></a>
+        <a class="btn" id="myCopy" href="#" target="_blank" rel="noopener"><span data-l="ar">نسخة من إجاباتي (PDF)</span><span data-l="en">A copy of my answers (PDF)</span></a>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- ============ REVIEW MODE (opened from the WhatsApp link) ============ -->
+<div id="reviewMode" hidden>
+  <div class="review-bar">
+    <p>هذا التقرير مُنشأ من رابط الاستبيان. البيانات موجودة داخل الرابط فقط، ولا تُحفظ على أي خادم.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button type="button" class="btn lime" id="pdfBtn"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg><span>تحميل PDF</span></button>
+      <button type="button" class="btn" id="printBtn"><span>طباعة</span></button>
+    </div>
+  </div>
+  <div id="reportHost"></div>
+</div>
+
+</main>
+
+<script>
+(function(){
+'use strict';
+var PHONE='971562723518';
+
+/* ---------- option label sets ---------- */
+var L={
+  y:{ar:'نعم',en:'Yes'}, n:{ar:'لا',en:'No'}, u:{ar:'غير متأكد',en:'Not sure'},
+  uf:{ar:'غير متأكدة',en:'Not sure'}, na:{ar:'لا ينطبق',en:'Not applicable'},
+  nev:{ar:'لم أجرِ الحجامة سابقًا',en:"I haven't had hijama before"}
+};
+var YNU=['y','n','u'], YN=['y','n'];
+
+/* ---------- questions ---------- */
+var S=[
+ {n:'01',ar:'المعلومات الأساسية',en:'Personal information',qs:[
+  {id:'1',t:'text',max:80,ar:'ما اسمك بالكامل؟',en:'What is your full name?'},
+  {id:'2',t:'date',ar:'ما تاريخ ميلادك؟',en:'What is your date of birth?'},
+  {id:'3',t:'area',max:300,ar:'ما السبب الرئيسي لرغبتك في إجراء الحجامة؟ وهل تعاني من ألم أو مشكلة صحية معينة؟',en:'What is the main reason you want hijama? Do you have any specific pain or health problem?'}
+ ]},
+ {n:'02',ar:'التاريخ الصحي',en:'Medical history',qs:[
+  {id:'4',o:YNU,f:['y','u'],ar:'هل تعاني من أي أمراض مزمنة، مثل السكري أو ارتفاع ضغط الدم أو أمراض القلب أو الكلى أو الكبد؟',en:'Do you have any chronic illness, such as diabetes, high blood pressure, or heart, kidney or liver disease?'},
+  {id:'5',o:YNU,f:['y','u'],ar:'هل تعاني حاليًا من أي مرض مؤقت، مثل الحمى أو العدوى أو الإرهاق الشديد؟',en:'Do you currently have any temporary illness, such as fever, infection or severe exhaustion?'},
+  {id:'6',o:YNU,f:['y','u'],ar:'هل سبق تشخيصك بالأنيميا أو نقص الهيموجلوبين أو نقص الحديد؟',en:'Have you ever been diagnosed with anemia, low hemoglobin or iron deficiency?'},
+  {id:'7',o:YNU,f:['y','u'],ar:'هل تعاني من اضطرابات النزيف أو التجلط، أو سهولة ظهور الكدمات، أو نزيف يستغرق وقتًا طويلًا للتوقف؟',en:'Do you have bleeding or clotting disorders, bruise easily, or have bleeding that takes a long time to stop?'},
+  {id:'8',o:YNU,f:['y','u'],ar:'هل تعاني من انخفاض ضغط الدم المصحوب بأعراض، أو اضطراب ضربات القلب، أو سبق أن تعرضت للإغماء أثناء سحب الدم أو الحقن؟',en:'Do you have low blood pressure with symptoms, an irregular heartbeat, or have you ever fainted during a blood draw or injection?'},
+  {id:'9',o:YNU,f:['y','u'],ar:'هل تعاني من ضعف المناعة أو أي حالة صحية تؤثر على مقاومة العدوى أو التئام الجروح؟',en:'Do you have weakened immunity or any condition that affects resistance to infection or wound healing?'},
+  {id:'10',o:YNU,f:['y','u'],ar:'هل لديك حاليًا جروح أو حروق أو التهابات أو أمراض جلدية في المناطق التي ترغب في إجراء الحجامة عليها؟',en:'Do you currently have wounds, burns, infections or skin conditions in the areas where you want hijama?'},
+  {id:'11',o:YNU,f:['y','u'],ar:'هل سبق أن عانيت من بطء التئام الجروح أو ظهور ندبات بارزة بعد الإصابات؟',en:'Have you ever had slow wound healing or raised scars after injuries?'},
+  {id:'12',o:YNU,f:['y','u'],ar:'هل لديك حساسية معروفة من المطهرات أو اللاصقات الطبية أو القفازات أو أي مواد طبية أخرى؟',en:'Do you have a known allergy to antiseptics, medical adhesives, gloves or any other medical materials?'},
+  {id:'13',o:YNU,f:['y','u'],ar:'هل تعاني من مشكلات في الأعصاب أو العضلات أو العظام، مثل الانزلاق الغضروفي أو التنميل أو ضعف العضلات أو آلام المفاصل؟',en:'Do you have nerve, muscle or bone problems, such as a herniated disc, numbness, muscle weakness or joint pain?'},
+  {id:'14',o:['y','n','uf','na'],f:['y','uf'],ar:'للعميلات: هل أنتِ حامل أو يوجد احتمال حمل؟',en:'For female clients: are you pregnant, or could you be pregnant?'}
+ ]},
+ {n:'03',ar:'الأدوية والإجراءات السابقة',en:'Medications & medical procedures',qs:[
+  {id:'15',o:YN,f:['y'],ar:'هل تتناول حاليًا أي أدوية أو تستخدم حقنًا علاجية بصورة منتظمة أو مؤقتة؟',en:'Are you currently taking any medication or using therapeutic injections, regularly or temporarily?'},
+  {id:'16',o:YNU,f:['y','u'],ar:'هل تستخدم أدوية تؤثر على النزيف أو التجلط، مثل الأسبرين أو الوارفارين أو أبيكسابان أو كلوبيدوجريل؟',en:'Do you use medication that affects bleeding or clotting, such as aspirin, warfarin, apixaban or clopidogrel?'},
+  {id:'17',o:YNU,f:['y','u'],ar:'هل تستخدم الكورتيزون بانتظام أو أي أدوية مثبطة للمناعة؟',en:'Do you use cortisone regularly, or any immunosuppressive medication?'},
+  {id:'18',o:YN,f:['y'],ar:'هل تبرعت بالدم أو أجريت حجامة رطبة أو تعرضت لفقدان كمية ملحوظة من الدم خلال الأشهر الثلاثة الماضية؟',en:'In the last three months, have you donated blood, had wet cupping, or lost a noticeable amount of blood?'},
+  {id:'19',o:YN,f:['y'],ar:'هل أجريت عملية جراحية مؤخرًا، أو لديك جرح جراحي لم يلتئم بالكامل؟',en:'Have you had surgery recently, or do you have a surgical wound that has not fully healed?'}
+ ]},
+ {n:'04',ar:'تجربتك السابقة ونشاطك',en:'Previous experience & lifestyle',qs:[
+  {id:'20',o:YN,ar:'هل سبق أن أجريت الحجامة الرطبة؟',en:'Have you had wet cupping before?'},
+  {id:'21',o:['y','n','nev'],f:['y'],ar:'إذا أجريت الحجامة سابقًا، هل تعرضت لأي مضاعفات مثل النزيف أو الإغماء أو العدوى أو الألم الشديد؟',en:'If you have had hijama before, did you have any complications such as bleeding, fainting, infection or severe pain?'},
+  {id:'22',o:YN,ar:'هل تمارس الرياضة بانتظام؟',en:'Do you exercise regularly?'},
+  {id:'23',o:YN,f:['y'],ar:'هل مارست تمرينًا شديدًا خلال آخر 24 ساعة، أو تعاني حاليًا من الجفاف أو الإرهاق؟',en:'Have you done intense exercise in the last 24 hours, or are you currently dehydrated or exhausted?'}
+ ]},
+ {n:'05',ar:'تفاصيل إضافية',en:'Additional health information',qs:[
+  {id:'24',t:'area',max:500,opt:true,ar:'إذا أجبت بـ«نعم» أو «غير متأكد» على أي سؤال صحي، يُرجى ذكر رقم السؤال وتوضيح التفاصيل، بما فيها أسماء الأدوية والجرعات عند الانطباق.',en:'If you answered “Yes” or “Not sure” to any health question, please give the question number and explain the details, including medication names and doses where relevant.'},
+  {id:'25',o:YN,f:['y'],detail:true,ar:'هل توجد أي معلومات صحية أخرى ترى أنه من المهم إبلاغ الممارس بها قبل الجلسة؟',en:'Is there any other health information you think is important to tell the practitioner before the session?'}
+ ]},
+ {n:'06',ar:'الإقرار الصحي',en:'Health declaration',qs:[
+  {id:'26',o:YN,must:'y',ar:'هل تؤكد أن المعلومات التي قدمتها صحيحة وكاملة حسب علمك، وأنك ستُبلغ الممارس بأي تغير في حالتك الصحية قبل الجلسة؟',en:'Do you confirm that the information you have given is true and complete to the best of your knowledge, and that you will tell the practitioner about any change in your health before the session?'},
+  {id:'27',o:YN,must:'y',ar:'هل تفهم أن إرسال هذا الاستبيان لا يعني الموافقة الطبية النهائية على إجراء الحجامة، وأن الجلسة قد تُؤجل أو تُلغى لأسباب تتعلق بسلامتك؟',en:'Do you understand that sending this questionnaire is not final medical approval for hijama, and that the session may be postponed or cancelled for your safety?'}
+ ]}
+];
+var Q={}; S.forEach(function(s){ s.qs.forEach(function(q){ Q[q.id]=q; }); });
+var ORDER=Object.keys(Q).sort(function(a,b){return a-b;});
+
+/* ---------- tiny DOM helper (text only, never HTML) ---------- */
+function el(tag,attrs,kids){
+  var e=document.createElement(tag);
+  if(attrs) for(var k in attrs){ if(k==='text') e.textContent=attrs[k]; else e.setAttribute(k,attrs[k]); }
+  (kids||[]).forEach(function(c){ if(c) e.appendChild(c); });
+  return e;
+}
+function bi(ar,en){ return [el('span',{'data-l':'ar',text:ar}),el('span',{'data-l':'en',text:en})]; }
+
+/* ---------- language ---------- */
+var lang='ar';
+function setLang(l){
+  lang = l==='en' ? 'en':'ar';
+  document.documentElement.lang=lang;
+  document.documentElement.dir= lang==='ar'?'rtl':'ltr';
+  document.querySelectorAll('.langs button').forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-set')===lang?'true':'false'); });
+  document.title = lang==='ar' ? 'استبيان التقييم الصحي قبل الحجامة الرطبة · كابتن أحمد ماهر' : 'Health Assessment Before Wet Cupping · Coach Ahmed Maher';
+}
+var lb=document.querySelector('.lang-btn'), lm=document.getElementById('langMenu');
+function openMenu(o){ lm.hidden=!o; lb.setAttribute('aria-expanded',o?'true':'false'); }
+lb.addEventListener('click',function(e){ e.stopPropagation(); openMenu(lm.hidden); });
+document.addEventListener('click',function(e){ if(!lm.hidden && !lm.contains(e.target)) openMenu(false); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape' && !lm.hidden){ openMenu(false); lb.focus(); } });
+document.querySelectorAll('.langs button').forEach(function(b){
+  b.addEventListener('click',function(){ setLang(b.getAttribute('data-set')); try{localStorage.setItem('lang',b.getAttribute('data-set'));}catch(e){} openMenu(false); });
+});
+var start='ar';
+try{ start=new URLSearchParams(location.search).get('lang')||localStorage.getItem('lang')||'ar'; }catch(e){}
+setLang(start);
+
+/* ---------- helpers ---------- */
+function b64urlEncode(str){
+  var bytes=new TextEncoder().encode(str), bin='';
+  for(var i=0;i<bytes.length;i++) bin+=String.fromCharCode(bytes[i]);
+  return btoa(bin).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+}
+function b64urlDecode(s){
+  s=s.replace(/-/g,'+').replace(/_/g,'/'); while(s.length%4) s+='=';
+  var bin=atob(s), bytes=new Uint8Array(bin.length);
+  for(var i=0;i<bin.length;i++) bytes[i]=bin.charCodeAt(i);
+  return new TextDecoder().decode(bytes);
+}
+function flagged(a){
+  return ORDER.filter(function(id){ var q=Q[id]; return q.f && a[id] && q.f.indexOf(a[id])>-1; });
+}
+function fmtDate(iso){
+  var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(iso||''); if(!m) return iso||'';
+  return m[3]+'/'+m[2]+'/'+m[1];
+}
+function ageOf(iso){
+  var d=new Date(iso); if(isNaN(d)) return '';
+  var n=new Date(), a=n.getFullYear()-d.getFullYear();
+  if(n.getMonth()<d.getMonth() || (n.getMonth()===d.getMonth() && n.getDate()<d.getDate())) a--;
+  return a>=0 && a<130 ? a : '';
+}
+
+/* =====================================================================
+   REVIEW MODE: questions.html#r=<data>
+   ===================================================================== */
+var hash=location.hash||'';
+if(hash.indexOf('#r=')===0){
+  document.getElementById('formMode').hidden=true;
+  document.getElementById('reviewMode').hidden=false;
+  setLang('ar');
+  document.querySelector('.back').hidden=true;
+  document.querySelector('.lang').hidden=true;
+  var host=document.getElementById('reportHost'), data=null;
+  try{ data=JSON.parse(b64urlDecode(hash.slice(3))); }catch(e){ data=null; }
+  if(!data || typeof data!=='object' || typeof data.a!=='object'){
+    host.appendChild(el('div',{'class':'bad-link'},[el('p',{text:'الرابط غير مكتمل أو تالف. اطلب من العميل إرسال الاستبيان مرة أخرى.'})]));
+    document.getElementById('pdfBtn').hidden=true; document.getElementById('printBtn').hidden=true;
+    return;
+  }
+  /* sanitise: keep only known ids, strings, capped */
+  var A={};
+  Object.keys(Q).concat(['25d']).forEach(function(id){
+    var v=data.a[id]; if(typeof v!=='string') return;
+    var q=Q[id];
+    if(q && q.o){ if(q.o.indexOf(v)>-1) A[id]=v; }
+    else A[id]=v.slice(0,600);
+  });
+  var when=new Date(typeof data.t==='number'?data.t:Date.now());
+  var whenTxt=isNaN(when)?'':when.toLocaleString('ar-AE',{dateStyle:'medium',timeStyle:'short'});
+  var fl=flagged(A);
+
+  var rep=el('div',{'class':'report',id:'report',dir:'rtl',lang:'ar'});
+  rep.appendChild(el('div',{'class':'r-top'},[
+    el('div',null,[
+      el('div',{'class':'r-eyebrow',text:'HIJAMA | PRE-SESSION HEALTH ASSESSMENT'}),
+      el('h1',{text:'استبيان التقييم الصحي قبل الحجامة الرطبة'}),
+      el('div',{'class':'r-by',text:'COACH AHMED MAHER | SPORTS RECOVERY'})
+    ]),
+    el('div',{'class':'r-date'},[el('div',{text:'تاريخ الإرسال'}),el('b',{text:whenTxt})])
+  ]));
+  var age=ageOf(A['2']);
+  rep.appendChild(el('div',{'class':'r-sum'},[
+    el('div',null,[el('span',{text:'الاسم'}),el('b',{text:A['1']||'—'})]),
+    el('div',null,[el('span',{text:'تاريخ الميلاد'}),el('b',{text:(fmtDate(A['2'])||'—')+(age!==''?'  ('+age+' سنة)':'')})]),
+    el('div',null,[el('span',{text:'لغة الاستبيان'}),el('b',{text:data.l==='en'?'English':'العربية'})]),
+    el('div',null,[el('span',{text:'إجابات تحتاج مراجعة'}),el('b',{text:String(fl.length)})])
+  ]));
+  rep.appendChild(fl.length
+    ? el('div',{'class':'r-flags has'},[el('b',{text:'⚠ أسئلة أُجيب عليها بـ «نعم» أو «غير متأكد»:'}),el('span',{text:fl.map(function(id){return 'س'+id+' ('+L[A[id]].ar+')';}).join('  ·  ')})])
+    : el('div',{'class':'r-flags none'},[el('b',{text:'✓ لا توجد إجابات بـ «نعم» أو «غير متأكد» على الأسئلة الصحية.'})]));
+
+  S.forEach(function(s){
+    rep.appendChild(el('h2',{text:s.n+' | '+s.ar}));
+    s.qs.forEach(function(q){
+      var v=A[q.id]||'';
+      var long=!q.o && q.t==='area';
+      var ans = q.o ? (v?L[v].ar:'—') : (q.t==='date'?fmtDate(v):v) || '—';
+      var isF = q.f && v && q.f.indexOf(v)>-1;
+      rep.appendChild(el('div',{'class':'r-q'+(long?' long':'')+(isF?' flag':'')},[
+        el('div',{'class':'rq'},[el('i',{text:'س'+q.id}),document.createTextNode(q.ar)]),
+        el('div',{'class':'ra',text:ans})
+      ]));
+      if(q.detail && v==='y'){
+        rep.appendChild(el('div',{'class':'r-q long flag'},[
+          el('div',{'class':'rq'},[el('i',{text:'س'+q.id}),document.createTextNode('التوضيح:')]),
+          el('div',{'class':'ra',text:A['25d']||'—'})
+        ]));
+      }
+    });
+  });
+  rep.appendChild(el('div',{'class':'r-ack'},[
+    el('b',{text:'إقرار العميل بالمسؤولية: '}),
+    document.createTextNode(data.ack ? 'أقرّ العميل بأنه قرأ الملاحظة، وأن جميع إجاباته صحيحة وكاملة، وأنه يتحمل المسؤولية الكاملة عنها، وأن الممارس يُخلي مسؤوليته في حال إخفاء أي معلومة صحية أو تقديم معلومات غير صحيحة أو اكتشاف معلومات أخرى لم يُفصح عنها.' : 'لم يتم تأكيد الإقرار.')
+  ]));
+  rep.appendChild(el('div',{'class':'r-foot'},[el('span',{text:'COACH AHMED MAHER · AHMED MAHER SPORTS RECOVERY'}),el('span',{text:'Instagram: @coach.ahmed.maher'})]));
+  host.appendChild(rep);
+
+  var fname=('Hijama-'+(A['1']||'client')).replace(/[\\\/:*?"<>|]+/g,'').replace(/\s+/g,'-').slice(0,60)+'.pdf';
+  document.getElementById('printBtn').addEventListener('click',function(){ window.print(); });
+  document.getElementById('pdfBtn').addEventListener('click',function(){
+    var btn=this, label=btn.querySelector('span'); label.textContent='جاري التجهيز...'; btn.disabled=true;
+    function run(){
+      window.html2pdf().set({
+        margin:[10,10,12,10], filename:fname,
+        image:{type:'jpeg',quality:0.95},
+        html2canvas:{scale:2,useCORS:true,backgroundColor:'#ffffff'},
+        jsPDF:{unit:'mm',format:'a4',orientation:'portrait'},
+        pagebreak:{mode:['css','legacy'],avoid:['.r-q','.r-ack','h2']}
+      }).from(document.getElementById('report')).save().then(function(){ label.textContent='تحميل PDF'; btn.disabled=false; })
+        .catch(function(){ label.textContent='تحميل PDF'; btn.disabled=false; window.print(); });
+    }
+    if(window.html2pdf) return run();
+    var sc=document.createElement('script');
+    sc.src='https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+    sc.onload=run; sc.onerror=function(){ label.textContent='تحميل PDF'; btn.disabled=false; window.print(); };
+    document.head.appendChild(sc);
+  });
+  return;
+}
+
+/* =====================================================================
+   FORM MODE
+   ===================================================================== */
+var host=document.getElementById('sections');
+S.forEach(function(s){
+  var sec=el('section',{'class':'sec'},[
+    el('div',{'class':'sec-head'},[el('div',{'class':'num',text:s.n}),el('div',null,[el('h2',null,bi(s.ar,s.en)),el('div',{'class':'en',text:s.en})])])
+  ]);
+  s.qs.forEach(function(q){
+    var box=el('div',{'class':'q',id:'q'+q.id,'data-q':q.id});
+    var num=el('span',{'class':'qn',text:q.id});
+    if(q.o){
+      var fs=el('fieldset');
+      var lg=el('legend',null,[num].concat(bi(q.ar,q.en)));
+      fs.appendChild(lg);
+      var opts=el('div',{'class':'opts'});
+      q.o.forEach(function(code){
+        var inp=el('input',{type:'radio',name:'q'+q.id,value:code});
+        opts.appendChild(el('label',{'class':'opt'},[inp,el('span',null,bi(L[code].ar,L[code].en))]));
+      });
+      fs.appendChild(opts); box.appendChild(fs);
+      if(q.detail){
+        var d=el('div',{'class':'detail',id:'d25',hidden:''},[
+          el('label',{'class':'ql','for':'f25d'},bi('يُرجى توضيح التفاصيل:','Please explain the details:')),
+          el('textarea',{'class':'field',id:'f25d',name:'q25d',maxlength:'400',rows:'3'})
+        ]);
+        box.appendChild(d);
+      }
+    }else{
+      var fid='f'+q.id;
+      box.appendChild(el('label',{'class':'ql','for':fid},[num].concat(bi(q.ar,q.en))));
+      var f;
+      if(q.t==='area') f=el('textarea',{'class':'field',id:fid,name:'q'+q.id,maxlength:String(q.max||400),rows:'4'});
+      else if(q.t==='date'){ f=el('input',{'class':'field',id:fid,name:'q'+q.id,type:'date',min:'1920-01-01',max:new Date().toISOString().slice(0,10)}); }
+      else f=el('input',{'class':'field',id:fid,name:'q'+q.id,type:'text',maxlength:String(q.max||120),autocomplete:q.id==='1'?'name':'off'});
+      box.appendChild(f);
+      if(q.id==='24') box.appendChild(el('div',{'class':'req-note',id:'n24',hidden:''}));
+    }
+    sec.appendChild(box);
+  });
+  host.appendChild(sec);
+});
+
+var form=document.getElementById('form');
+function val(id){
+  var q=Q[id];
+  if(q && q.o){ var c=form.querySelector('input[name="q'+id+'"]:checked'); return c?c.value:''; }
+  var f=document.getElementById('f'+id); return f?f.value.trim():'';
+}
+function collect(){ var a={}; ORDER.forEach(function(id){ var v=val(id); if(v) a[id]=v; }); var d=val('25d'); if(d) a['25d']=d; return a; }
+
+function refresh(){
+  var a=collect(), fl=flagged(a).filter(function(id){ return id!=='25'; }); /* Q25 has its own detail box */
+  /* Q24 required when any health answer is flagged */
+  var n24=document.getElementById('n24');
+  if(fl.length){
+    n24.hidden=false;
+    n24.textContent='';
+    n24.appendChild(el('span',{'data-l':'ar',text:'مطلوب: لأنك أجبت بـ«نعم» أو «غير متأكد» على السؤال: '+fl.join('، ')}));
+    n24.appendChild(el('span',{'data-l':'en',text:'Required: you answered “Yes” or “Not sure” to question: '+fl.join(', ')}));
+  }else n24.hidden=true;
+  document.getElementById('d25').hidden = a['25']!=='y';
+  /* Q24 only counts when it is required */
+  var need=ORDER.filter(function(id){ return id!=='24' || fl.length || a['24']; });
+  var done=need.filter(function(id){ return !!a[id]; }).length;
+  document.getElementById('pDone').textContent=done;
+  document.getElementById('pTotal').textContent=need.length;
+  document.getElementById('pFill').style.width=(done/need.length*100)+'%';
+  return {a:a,fl:fl};
+}
+form.addEventListener('change',function(e){
+  if(e.target.name==='q20' && e.target.value==='n'){
+    var r=form.querySelector('input[name="q21"][value="nev"]'); if(r) r.checked=true;
+  }
+  var box=e.target.closest('.q'); if(box){ box.classList.remove('err'); var m=box.querySelector('.emsg'); if(m) m.remove(); }
+  if(e.target.id==='ack') document.getElementById('ackLabel').classList.remove('err');
+  refresh();
+});
+form.addEventListener('input',function(e){
+  var box=e.target.closest('.q'); if(box && e.target.value.trim()){ box.classList.remove('err'); var m=box.querySelector('.emsg'); if(m) m.remove(); }
+  refresh();
+});
+refresh();
+
+function markErr(id,ar,en){
+  var box=document.getElementById('q'+id); if(!box) return;
+  box.classList.add('err');
+  if(!box.querySelector('.emsg')) box.appendChild(el('p',{'class':'emsg'},bi(ar,en)));
+}
+
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  form.querySelectorAll('.q.err').forEach(function(b){ b.classList.remove('err'); var m=b.querySelector('.emsg'); if(m) m.remove(); });
+  var errBox=document.getElementById('formErr'); errBox.hidden=true; errBox.textContent='';
+  var st=refresh(), a=st.a, fl=st.fl, allFl=flagged(a), missing=[], blocked=false;
+  ORDER.forEach(function(id){
+    var q=Q[id];
+    if(id==='24'){ if(fl.length && !a['24']){ missing.push(id); markErr(id,'يرجى توضيح تفاصيل الإجابات المذكورة.','Please explain the answers listed.'); } return; }
+    if(!a[id]){ missing.push(id); markErr(id,'يرجى الإجابة على هذا السؤال.','Please answer this question.'); return; }
+    if(q.must && a[id]!==q.must){ blocked=true; markErr(id,'لا يمكن إرسال الاستبيان بدون الموافقة على هذا الإقرار.','The questionnaire cannot be sent without agreeing to this declaration.'); }
+  });
+  if(a['25']==='y' && !a['25d']){ missing.push('25'); markErr('25','يرجى توضيح التفاصيل.','Please explain the details.'); }
+  var ack=document.getElementById('ack').checked;
+  if(!ack) document.getElementById('ackLabel').classList.add('err');
+  if(missing.length || blocked || !ack){
+    var parts=[];
+    if(missing.length) parts.push(bi('يوجد '+missing.length+' سؤال لم تتم الإجابة عليه: '+missing.join('، '),missing.length+' question(s) still need an answer: '+missing.join(', ')));
+    if(blocked) parts.push(bi('يجب الموافقة على الإقرار الصحي (السؤالان 26 و27) لإرسال الاستبيان.','You must agree to the health declaration (questions 26 and 27) to send the questionnaire.'));
+    if(!ack) parts.push(bi('يرجى تأكيد الإقرار بالمسؤولية قبل الإرسال.','Please confirm the responsibility statement before sending.'));
+    parts.forEach(function(p){ errBox.appendChild(el('div',null,p)); });
+    errBox.hidden=false;
+    var first=form.querySelector('.q.err')||document.getElementById('ackLabel');
+    first.scrollIntoView({behavior:'smooth',block:'start'});
+    return;
+  }
+
+  /* build the report link (data lives only in the link fragment) */
+  var payload={v:1,t:Date.now(),l:lang,ack:1,a:a};
+  var base=location.href.split('#')[0].split('?')[0];
+  var link=base+'#r='+b64urlEncode(JSON.stringify(payload));
+  var lines=[
+    'استبيان التقييم الصحي قبل الحجامة الرطبة',
+    'الاسم: '+a['1'],
+    'تاريخ الميلاد: '+fmtDate(a['2']),
+    allFl.length ? 'إجابات تحتاج مراجعة: '+allFl.map(function(id){ return 'س'+id+' ('+L[a[id]].ar+')'; }).join('، ') : 'لا توجد إجابات بنعم أو غير متأكد على الأسئلة الصحية',
+    '',
+    'التقرير الكامل وتحميل PDF:',
+    link
+  ];
+  var wa='https://wa.me/'+PHONE+'?text='+encodeURIComponent(lines.join('\n'));
+  var w=window.open(wa,'_blank'); if(w){ try{ w.opener=null; }catch(err){} }
+  document.getElementById('waAgain').href=wa;
+  document.getElementById('myCopy').href=link;
+  document.getElementById('submitBox').hidden=true;
+  document.getElementById('done').hidden=false;
+  document.getElementById('done').scrollIntoView({behavior:'smooth',block:'center'});
+  if(!w) location.href=wa;
+});
+})();
+</script>
+</body>
+</html>
