@@ -62,7 +62,9 @@ header{display:flex;flex-direction:column;gap:10px;margin-bottom:44px}
 .pill{font-size:14px;font-weight:500;color:var(--on-accent);background:var(--accent);padding:6px 14px;border-radius:999px}
 .bar{width:64px;height:5px;background:var(--accent);border-radius:3px;margin-top:20px}
 h1{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(38px,10vw,60px);line-height:1.2}
-.sub{color:var(--muted);font-size:18px}
+.sub{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;color:var(--muted);font-size:18px}
+.lic{display:inline-flex;align-items:center;gap:6px;padding:4px 12px 4px 10px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);font-size:14px;font-weight:600}
+.lic svg{width:18px;height:18px;flex-shrink:0}
 
 section{margin-bottom:40px}
 h2{margin:0 0 6px;font-family:var(--display);font-weight:600;font-size:28px;color:var(--accent)}
@@ -107,7 +109,9 @@ html[dir="rtl"] .h-link svg,html[dir="rtl"] .more svg{transform:scaleX(-1)}
 
 .packs-head{display:flex;flex-direction:column;gap:2px;margin-bottom:16px}
 .packs-head h2{display:flex;align-items:center;gap:10px;margin:0}
+.packs-head h2{flex-wrap:wrap}
 .packs-head h2 svg{width:30px;height:30px;flex-shrink:0}
+.pk-note{font-family:var(--body);font-size:14px;font-weight:600;color:var(--warn);background:var(--warn-bg);border:1px solid var(--warn);border-radius:999px;padding:3px 12px}
 .packs-head .lead{margin:0}
 .packs{display:grid;grid-template-columns:1fr;gap:14px}
 @media (min-width:560px){.packs{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -166,7 +170,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
   </div>
   <div class="bar"></div>
   <h1 data-i="title">الاستشفاء الرياضي</h1>
-  <div class="sub" data-i="sub">مساج رياضي وحجامة · خبرة منذ 2017</div>
+  <div class="sub"><span data-i="sub">مساج رياضي وحجامة · خبرة منذ 2017</span><span class="lic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4"/></svg><span data-i="lic">مرخّص من الجهات المصرية</span></span></div>
 </header>
 
 <section aria-labelledby="sports">
@@ -260,16 +264,16 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 
 <section aria-labelledby="packs">
   <div class="packs-head">
-    <h2 id="packs"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8h14v-8"/><path d="M12 8v12"/><path d="M12 8c-1.5-3-5-3.5-5-1.2C7 8 9.5 8 12 8z"/><path d="M12 8c1.5-3 5-3.5 5-1.2C17 8 14.5 8 12 8z"/></svg><span data-i="packsH">الباقات</span></h2>
+    <h2 id="packs"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8h14v-8"/><path d="M12 8v12"/><path d="M12 8c-1.5-3-5-3.5-5-1.2C7 8 9.5 8 12 8z"/><path d="M12 8c1.5-3 5-3.5 5-1.2C17 8 14.5 8 12 8z"/></svg><span data-i="packsH">الباقات</span><span class="pk-note" data-i="pkNote">غير شاملة الحجامة الرطبة</span></h2>
     <p class="lead" data-i="packsLead">جلسات كاملة بسعر أوفر</p>
   </div>
   <div class="packs">
     <div class="pack outline">
-      <div class="badge" data-i="p1b">وفّر 100 درهم</div>
+      <div class="badge" data-i="p1b">وفّر 200 درهم</div>
       <div class="pname" data-i="p1">4 جلسات كاملة</div>
-      <div class="pprice"><b>1100</b><span data-i="aed">درهم</span><s>1200</s></div>
+      <div class="pprice"><b>1000</b><span data-i="aed">درهم</span><s>1200</s></div>
       <div class="valid" data-i="p1v">صلاحية 6 أسابيع من أول جلسة</div>
-      <a class="book" href="https://wa.me/971562723518" data-wa="p1" data-price="1100" data-i="sub2">اشترك في الباقة</a>
+      <a class="book" href="https://wa.me/971562723518" data-wa="p1" data-price="1000" data-i="sub2">اشترك في الباقة</a>
     </div>
     <div class="pack filled">
       <div class="badge" data-i="p2b">الأكثر توفيرًا · وفّر 300 درهم</div>
@@ -304,7 +308,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 var PHONE = '971562723518';
 var T = {
 ar:{dir:'rtl',doc:'كابتن أحمد ماهر | الاستشفاء الرياضي والحجامة',
-brand:'كابتن أحمد ماهر',pill:'جلسات منزلية برايفت',title:'الاستشفاء الرياضي',sub:'مساج رياضي وحجامة · خبرة منذ 2017',
+brand:'كابتن أحمد ماهر',pill:'جلسات منزلية برايفت',title:'الاستشفاء الرياضي',sub:'مساج رياضي وحجامة · خبرة منذ 2017',lic:'مرخّص من الجهات المصرية',pkNote:'غير شاملة الحجامة الرطبة',
 sportsH:'الجلسات الرياضية',sportsLead:'كل جلسة شاملة جميع الأدوات:',
 tOil:'مساج بالزيوت',tIastm:'أدوات IASTM',tGun:'مسدسات المساج',tFire:'حجامة نارية',tSlide:'حجامة متزحلقة',tBreo:'جهاز الرقبة Breo',
 s1:'جلسة مركزة',s1d:'Upper Body أو Lower Body',s1m:'نصف الجسم كاملًا، وليست عضلة واحدة · لا تقل عن 60 دقيقة',
@@ -315,11 +319,11 @@ more:'دليل الحجامة الكامل: الاستعداد والعناية 
 w1:'أساسية · لحد 9 كاسات',m40:'لا تقل عن 40 دقيقة',w2:'شاملة · لحد 15 كاسة',m60:'لا تقل عن 60 دقيقة',
 alertT:'تنبيه',alert:'الأسعار غير شاملة مواصلات التنقل، وتختلف حسب المسافة.',
 packsH:'الباقات',packsLead:'جلسات كاملة بسعر أوفر',
-p1b:'وفّر 100 درهم',p1:'4 جلسات كاملة',p1v:'صلاحية 6 أسابيع من أول جلسة',
+p1b:'وفّر 200 درهم',p1:'4 جلسات كاملة',p1v:'صلاحية 6 أسابيع من أول جلسة',
 p2b:'الأكثر توفيرًا · وفّر 300 درهم',p2:'8 جلسات كاملة',p2v:'صلاحية 12 أسبوعًا من أول جلسة',
 sub2:'اشترك في الباقة',cta:'احجز على الواتساب'},
 en:{dir:'ltr',doc:'Coach Ahmed Maher | Sports Recovery & Cupping',
-brand:'Coach Ahmed Maher',pill:'Private home sessions',title:'Sports Recovery',sub:'Sports massage & cupping · Experience since 2017',
+brand:'Coach Ahmed Maher',pill:'Private home sessions',title:'Sports Recovery',sub:'Sports massage & cupping · Experience since 2017',lic:'Licensed by Egyptian authorities',pkNote:'Wet cupping not included',
 sportsH:'Sports Sessions',sportsLead:'Every session includes all tools:',
 tOil:'Oil massage',tIastm:'IASTM tools',tGun:'Massage guns',tFire:'Fire cupping',tSlide:'Sliding cupping',tBreo:'Breo neck massager',
 s1:'Focused Session',s1d:'Upper Body or Lower Body',s1m:'The whole half of the body, not a single muscle · At least 60 min',
@@ -330,11 +334,11 @@ more:'The complete hijama guide: preparation and aftercare',wetH:'Wet Cupping (H
 w1:'Basic · Up to 9 cups',m40:'At least 40 min',w2:'Complete · Up to 15 cups',m60:'At least 60 min',
 alertT:'Please note',alert:'Prices do not include transportation, which varies by distance.',
 packsH:'Packages',packsLead:'Full sessions at a better price',
-p1b:'Save 100 AED',p1:'4 Full Sessions',p1v:'Valid for 6 weeks from the first session',
+p1b:'Save 200 AED',p1:'4 Full Sessions',p1v:'Valid for 6 weeks from the first session',
 p2b:'Best value · Save 300 AED',p2:'8 Full Sessions',p2v:'Valid for 12 weeks from the first session',
 sub2:'Get this package',cta:'Book on WhatsApp'},
 hi:{dir:'ltr',doc:'कोच अहमद माहेर | स्पोर्ट्स रिकवरी और कपिंग',
-brand:'कोच अहमद माहेर',pill:'प्राइवेट होम सेशन',title:'स्पोर्ट्स रिकवरी',sub:'स्पोर्ट्स मसाज और कपिंग (हिजामा) · 2017 से अनुभव',
+brand:'कोच अहमद माहेर',pill:'प्राइवेट होम सेशन',title:'स्पोर्ट्स रिकवरी',sub:'स्पोर्ट्स मसाज और कपिंग (हिजामा) · 2017 से अनुभव',lic:'मिस्र के अधिकारियों से लाइसेंस प्राप्त',pkNote:'वेट कपिंग शामिल नहीं',
 sportsH:'स्पोर्ट्स सेशन',sportsLead:'हर सेशन में सभी टूल्स शामिल हैं:',
 tOil:'ऑयल मसाज',tIastm:'IASTM टूल्स',tGun:'मसाज गन',tFire:'फायर कपिंग',tSlide:'स्लाइडिंग कपिंग',tBreo:'Breo नेक मसाजर',
 s1:'फोकस्ड सेशन',s1d:'अपर बॉडी या लोअर बॉडी',s1m:'पूरा आधा शरीर, सिर्फ एक मांसपेशी नहीं · कम से कम 60 मिनट',
@@ -345,11 +349,11 @@ more:'हिजामा की पूरी गाइड: तैयारी �
 w1:'बेसिक · 9 कप तक',m40:'कम से कम 40 मिनट',w2:'कम्प्लीट · 15 कप तक',m60:'कम से कम 60 मिनट',
 alertT:'ध्यान दें',alert:'कीमतों में आने-जाने का खर्च शामिल नहीं है, यह दूरी के अनुसार अलग होता है।',
 packsH:'पैकेज',packsLead:'बेहतर कीमत पर फुल सेशन',
-p1b:'100 दिरहम बचाएं',p1:'4 फुल सेशन',p1v:'पहले सेशन से 6 हफ्ते तक मान्य',
+p1b:'200 दिरहम बचाएं',p1:'4 फुल सेशन',p1v:'पहले सेशन से 6 हफ्ते तक मान्य',
 p2b:'सबसे ज़्यादा बचत · 300 दिरहम बचाएं',p2:'8 फुल सेशन',p2v:'पहले सेशन से 12 हफ्ते तक मान्य',
 sub2:'पैकेज लें',cta:'WhatsApp पर बुक करें'},
 ur:{dir:'rtl',doc:'کوچ احمد ماہر | اسپورٹس ریکوری اور حجامہ',
-brand:'کوچ احمد ماہر',pill:'پرائیویٹ ہوم سیشن',title:'اسپورٹس ریکوری',sub:'اسپورٹس مساج اور حجامہ · 2017 سے تجربہ',
+brand:'کوچ احمد ماہر',pill:'پرائیویٹ ہوم سیشن',title:'اسپورٹس ریکوری',sub:'اسپورٹس مساج اور حجامہ · 2017 سے تجربہ',lic:'مصری حکام سے لائسنس یافتہ',pkNote:'ویٹ کپنگ شامل نہیں',
 sportsH:'اسپورٹس سیشن',sportsLead:'ہر سیشن میں تمام ٹولز شامل ہیں:',
 tOil:'آئل مساج',tIastm:'IASTM ٹولز',tGun:'مساج گن',tFire:'فائر کپنگ',tSlide:'سلائیڈنگ کپنگ',tBreo:'Breo نیک مساجر',
 s1:'فوکسڈ سیشن',s1d:'اپر باڈی یا لوئر باڈی',s1m:'پورا آدھا جسم، صرف ایک پٹھا نہیں · کم از کم 60 منٹ',
@@ -360,7 +364,7 @@ more:'حجامہ کی مکمل گائیڈ: تیاری اور بعد کی دیک�
 w1:'بیسک · 9 کپ تک',m40:'کم از کم 40 منٹ',w2:'مکمل · 15 کپ تک',m60:'کم از کم 60 منٹ',
 alertT:'نوٹ',alert:'قیمتوں میں آنے جانے کا خرچ شامل نہیں، یہ فاصلے کے مطابق مختلف ہوتا ہے۔',
 packsH:'پیکجز',packsLead:'بہتر قیمت پر فل سیشن',
-p1b:'100 درہم بچائیں',p1:'4 فل سیشن',p1v:'پہلے سیشن سے 6 ہفتے تک قابلِ استعمال',
+p1b:'200 درہم بچائیں',p1:'4 فل سیشن',p1v:'پہلے سیشن سے 6 ہفتے تک قابلِ استعمال',
 p2b:'سب سے زیادہ بچت · 300 درہم بچائیں',p2:'8 فل سیشن',p2v:'پہلے سیشن سے 12 ہفتے تک قابلِ استعمال',
 sub2:'پیکج لیں',cta:'واٹس ایپ پر بک کریں'}
 };
