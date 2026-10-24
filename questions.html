@@ -10,7 +10,7 @@
 <meta name="color-scheme" content="dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap">
 <style>
 :root{
   --bg:#111315;--surface:#1B1E21;--surface-2:#24282C;--line:#2A2E32;--chip:#3A3F44;
@@ -21,7 +21,10 @@
   --body:'IBM Plex Sans Arabic','Readex Pro',sans-serif;
 }
 html[lang="en"]{--display:'Readex Pro',sans-serif;--body:'Readex Pro',sans-serif}
-html[lang="ar"] [data-l="en"],html[lang="en"] [data-l="ar"]{display:none !important}
+html[lang="ar"] [data-l]:not([data-l="ar"]),html[lang="en"] [data-l]:not([data-l="en"]),html[lang="hi"] [data-l]:not([data-l="hi"]),html[lang="ur"] [data-l]:not([data-l="ur"]){display:none !important}
+html[lang="hi"]{--display:'Noto Sans Devanagari','Readex Pro',sans-serif;--body:'Noto Sans Devanagari',sans-serif}
+html[lang="ur"]{--display:'Noto Naskh Arabic',serif;--body:'Noto Naskh Arabic',serif}
+html[lang="ur"] body{line-height:1.95}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.7}
@@ -42,6 +45,8 @@ html[dir="rtl"] .back svg{transform:scaleX(-1)}
 .langs button:hover{background:var(--surface-2)}
 .langs button[lang="ar"]{font-family:'IBM Plex Sans Arabic',sans-serif}
 .langs button[lang="en"]{font-family:'Readex Pro',sans-serif}
+.langs button[lang="hi"]{font-family:'Noto Sans Devanagari',sans-serif}
+.langs button[lang="ur"]{font-family:'Noto Naskh Arabic',serif}
 .langs button[aria-pressed="true"]{color:var(--accent);font-weight:600}
 .langs button[aria-pressed="true"]::after{content:"✓"}
 
@@ -82,8 +87,8 @@ html[dir="rtl"] .back svg{transform:scaleX(-1)}
 .opts{display:flex;flex-wrap:wrap;gap:8px}
 .opt{position:relative;display:inline-flex}
 .opt input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
-.opt span{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:76px;padding:0 18px;border-radius:999px;border:1px solid var(--chip);background:var(--bg);font-size:15px;font-weight:500;color:var(--text-2);cursor:pointer;user-select:none}
-.opt span:hover{border-color:var(--muted-2)}
+.opt>span{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:76px;padding:0 18px;border-radius:999px;border:1px solid var(--chip);background:var(--bg);font-size:15px;font-weight:500;color:var(--text-2);cursor:pointer;user-select:none}
+.opt>span:hover{border-color:var(--muted-2)}
 .opt input:checked+span{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:700}
 .opt input:focus-visible+span{outline:3px solid var(--accent);outline-offset:3px}
 .field{display:block;width:100%;min-height:48px;padding:12px 14px;border-radius:12px;border:1px solid var(--chip);background:var(--bg);color:var(--text);font:inherit;font-size:16px}
@@ -159,7 +164,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 <div class="topbar">
   <a class="back" href="hijama.html">
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-    <span data-l="ar">دليل الحجامة</span><span data-l="en">Hijama guide</span>
+    <span data-l="ar">دليل الحجامة</span><span data-l="en">Hijama guide</span><span data-l="hi">हिजामा गाइड</span><span data-l="ur">حجامہ گائیڈ</span>
   </a>
   <div class="lang">
     <button type="button" class="lang-btn" aria-label="Language / اللغة" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">
@@ -168,6 +173,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
     <ul class="langs" id="langMenu" hidden>
       <li><button type="button" lang="ar" data-set="ar" aria-pressed="true">العربية</button></li>
       <li><button type="button" lang="en" data-set="en" aria-pressed="false">English</button></li>
+      <li><button type="button" lang="hi" data-set="hi" aria-pressed="false">हिन्दी</button></li>
+      <li><button type="button" lang="ur" data-set="ur" aria-pressed="false">اردو</button></li>
     </ul>
   </div>
 </div>
@@ -176,14 +183,14 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 <div id="formMode">
   <header class="hero">
     <div class="eyebrow">Hijama · Pre-session health assessment</div>
-    <h1><span data-l="ar">استبيان التقييم الصحي قبل الحجامة الرطبة</span><span data-l="en">Health Assessment Before Wet Cupping</span></h1>
+    <h1><span data-l="ar">استبيان التقييم الصحي قبل الحجامة الرطبة</span><span data-l="en">Health Assessment Before Wet Cupping</span><span data-l="hi">वेट कपिंग से पहले स्वास्थ्य मूल्यांकन</span><span data-l="ur">ویٹ کپنگ سے پہلے صحت کا جائزہ</span></h1>
     <div class="bar"></div>
     <div class="by">COACH AHMED MAHER · SPORTS RECOVERY</div>
   </header>
 
   <section class="resp" aria-labelledby="respT">
     <p class="rh" id="respT"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>
-      <span data-l="ar">ملاحظة هامة قبل البدء</span><span data-l="en">Important notice before you start</span></p>
+      <span data-l="ar">ملاحظة هامة قبل البدء</span><span data-l="en">Important notice before you start</span><span data-l="hi">शुरू करने से पहले ज़रूरी सूचना</span><span data-l="ur">شروع کرنے سے پہلے اہم نوٹ</span></p>
     <div data-l="ar">
       <p>أنت <b>المسؤول مسؤولية كاملة</b> عن صحة ودقة جميع الإجابات التي تقدمها في هذا الاستبيان، ويعتمد قرار إجراء الجلسة على هذه المعلومات.</p>
       <p>في حال إخفاء أي معلومة صحية، أو تقديم معلومات غير صحيحة أو غير مكتملة، أو اكتشاف حالات أو معلومات أخرى لم يتم الإفصاح عنها، <b>يُخلي الممارس (كابتن أحمد ماهر) مسؤوليته</b> عن أي مضاعفات أو أضرار تنتج عن ذلك.</p>
@@ -191,14 +198,14 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
     <div data-l="en">
       <p>You are <b>fully responsible</b> for the accuracy and completeness of every answer you give in this questionnaire, and the decision to go ahead with the session depends on this information.</p>
       <p>If any health information is withheld, if incorrect or incomplete information is given, or if other conditions or information that were not disclosed are discovered, <b>the practitioner (Coach Ahmed Maher) is not responsible</b> for any complications or harm resulting from that.</p>
-    </div>
+    </div><div data-l="hi"> <p>इस प्रश्नावली में आपके दिए गए सभी जवाबों के सही और पूरे होने की <b>पूरी ज़िम्मेदारी आपकी है</b>, और सेशन करने का फैसला इसी जानकारी पर आधारित होता है।</p> <p>अगर कोई स्वास्थ्य जानकारी छिपाई जाती है, गलत या अधूरी जानकारी दी जाती है, या ऐसी कोई और स्थिति या जानकारी सामने आती है जो बताई नहीं गई थी, तो उससे होने वाली किसी भी परेशानी या नुकसान के लिए <b>प्रैक्टिशनर (कोच अहमद माहेर) ज़िम्मेदार नहीं होंगे</b>।</p> </div><div data-l="ur"> <p>اس سوالنامے میں آپ کے دیے گئے تمام جوابات کے درست اور مکمل ہونے کی <b>پوری ذمہ داری آپ پر ہے</b>، اور سیشن کرنے کا فیصلہ انہی معلومات پر منحصر ہے۔</p> <p>اگر کوئی صحت کی معلومات چھپائی جائے، غلط یا نامکمل معلومات دی جائیں، یا کوئی ایسی حالت یا معلومات سامنے آئیں جو بتائی نہیں گئی تھیں، تو اس کے نتیجے میں ہونے والی کسی بھی پیچیدگی یا نقصان کی <b>ذمہ داری پریکٹیشنر (کوچ احمد ماہر) پر نہیں ہوگی</b>۔</p> </div>
   </section>
 
   <p class="intro" data-l="ar">أجب على جميع الأسئلة، ثم اضغط «أنهيت الإجابات» في آخر الصفحة لإرسال إجاباتك إلى كابتن أحمد على واتساب. إجاباتك لا تُحفظ على الموقع.</p>
-  <p class="intro" data-l="en">Answer all questions, then tap “I've finished” at the end of the page to send your answers to Coach Ahmed on WhatsApp. Your answers are not stored on this website.</p>
+  <p class="intro" data-l="en">Answer all questions, then tap “I've finished” at the end of the page to send your answers to Coach Ahmed on WhatsApp. Your answers are not stored on this website.</p><p class="intro" data-l="hi">सभी सवालों के जवाब दें, फिर पेज के आखिर में «मैंने जवाब पूरे कर लिए» पर टैप करें, ताकि आपके जवाब WhatsApp पर कोच अहमद को भेजे जा सकें। आपके जवाब वेबसाइट पर सेव नहीं होते।</p><p class="intro" data-l="ur">تمام سوالات کے جواب دیں، پھر صفحے کے آخر میں «میں نے جواب مکمل کر لیے» پر ٹیپ کریں تاکہ آپ کے جوابات واٹس ایپ پر کوچ احمد کو بھیجے جا سکیں۔ آپ کے جوابات ویب سائٹ پر محفوظ نہیں ہوتے۔</p>
 
   <div class="progress" aria-live="polite">
-    <div class="pt"><span data-l="ar">تقدّمك</span><span data-l="en">Your progress</span><span><b id="pDone">0</b> / <span id="pTotal">27</span></span></div>
+    <div class="pt"><span data-l="ar">تقدّمك</span><span data-l="en">Your progress</span><span data-l="hi">आपकी प्रगति</span><span data-l="ur">آپ کی پیش رفت</span><span><b id="pDone">0</b> / <span id="pTotal">27</span></span></div>
     <div class="track"><div class="fill" id="pFill"></div></div>
   </div>
 
@@ -210,24 +217,24 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
         <input type="checkbox" id="ack">
         <span>
           <span data-l="ar">قرأت الملاحظة الموجودة أعلى الصفحة، وأقر بأن جميع إجاباتي صحيحة وكاملة، وأتحمل المسؤولية الكاملة عنها.</span>
-          <span data-l="en">I have read the notice at the top of this page. I confirm that all my answers are true and complete, and I take full responsibility for them.</span>
+          <span data-l="en">I have read the notice at the top of this page. I confirm that all my answers are true and complete, and I take full responsibility for them.</span><span data-l="hi">मैंने पेज के ऊपर दी गई सूचना पढ़ ली है। मैं पुष्टि करता/करती हूँ कि मेरे सभी जवाब सही और पूरे हैं, और मैं उनकी पूरी ज़िम्मेदारी लेता/लेती हूँ।</span><span data-l="ur">میں نے صفحے کے اوپر دیا گیا نوٹ پڑھ لیا ہے۔ میں تصدیق کرتا/کرتی ہوں کہ میرے تمام جوابات درست اور مکمل ہیں، اور میں ان کی پوری ذمہ داری لیتا/لیتی ہوں۔</span>
         </span>
       </label>
       <button type="submit" class="send">
         <span class="s1"><svg aria-hidden="true" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/><path fill="#25D366" d="M9.2 7.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.3 3.6 5.6 4.9 2.8 1.1 3.3.9 3.9.8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4l-2-1c-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2z"/></svg>
-          <span data-l="ar">أنهيت الإجابات</span><span data-l="en">I've finished</span></span>
-        <span class="s2"><span data-l="ar">سيتم إرسال إجاباتك إلى كابتن أحمد على واتساب</span><span data-l="en">Your answers will be sent to Coach Ahmed on WhatsApp</span></span>
+          <span data-l="ar">أنهيت الإجابات</span><span data-l="en">I've finished</span><span data-l="hi">मैंने जवाब पूरे कर लिए</span><span data-l="ur">میں نے جواب مکمل کر لیے</span></span>
+        <span class="s2"><span data-l="ar">سيتم إرسال إجاباتك إلى كابتن أحمد على واتساب</span><span data-l="en">Your answers will be sent to Coach Ahmed on WhatsApp</span><span data-l="hi">आपके जवाब WhatsApp पर कोच अहमद को भेजे जाएँगे</span><span data-l="ur">آپ کے جوابات واٹس ایپ پر کوچ احمد کو بھیجے جائیں گے</span></span>
       </button>
       <div class="form-err" id="formErr" role="alert" hidden></div>
     </div>
 
     <div class="done" id="done" hidden>
-      <h2><span data-l="ar">إجاباتك جاهزة للإرسال</span><span data-l="en">Your answers are ready to send</span></h2>
+      <h2><span data-l="ar">إجاباتك جاهزة للإرسال</span><span data-l="en">Your answers are ready to send</span><span data-l="hi">आपके जवाब भेजने के लिए तैयार हैं</span><span data-l="ur">آپ کے جوابات بھیجنے کے لیے تیار ہیں</span></h2>
       <p data-l="ar">فتحنا لك واتساب برسالة فيها إجاباتك. اضغط <b>إرسال</b> داخل واتساب لإتمام الإرسال.</p>
-      <p data-l="en">We opened WhatsApp with a message containing your answers. Tap <b>Send</b> in WhatsApp to complete.</p>
+      <p data-l="en">We opened WhatsApp with a message containing your answers. Tap <b>Send</b> in WhatsApp to complete.</p><p data-l="hi">हमने आपके जवाबों वाले मैसेज के साथ WhatsApp खोल दिया है। भेजना पूरा करने के लिए WhatsApp में <b>Send</b> पर टैप करें।</p><p data-l="ur">ہم نے آپ کے جوابات والے پیغام کے ساتھ واٹس ایپ کھول دیا ہے۔ بھیجنا مکمل کرنے کے لیے واٹس ایپ میں <b>Send</b> پر ٹیپ کریں۔</p>
       <div class="row">
-        <a class="btn green" id="waAgain" href="#" target="_blank" rel="noopener"><span data-l="ar">واتساب لم يفتح؟ اضغط هنا</span><span data-l="en">WhatsApp didn't open? Tap here</span></a>
-        <a class="btn" id="myCopy" href="#" target="_blank" rel="noopener"><span data-l="ar">نسخة من إجاباتي (PDF)</span><span data-l="en">A copy of my answers (PDF)</span></a>
+        <a class="btn green" id="waAgain" href="#" target="_blank" rel="noopener"><span data-l="ar">واتساب لم يفتح؟ اضغط هنا</span><span data-l="en">WhatsApp didn't open? Tap here</span><span data-l="hi">WhatsApp नहीं खुला? यहाँ टैप करें</span><span data-l="ur">واٹس ایپ نہیں کھلا؟ یہاں ٹیپ کریں</span></a>
+        <a class="btn" id="myCopy" href="#" target="_blank" rel="noopener"><span data-l="ar">نسخة من إجاباتي (PDF)</span><span data-l="en">A copy of my answers (PDF)</span><span data-l="hi">मेरे जवाबों की कॉपी (PDF)</span><span data-l="ur">میرے جوابات کی کاپی (PDF)</span></a>
       </div>
     </div>
   </form>
@@ -302,6 +309,43 @@ var S=[
   {id:'27',o:YN,must:'y',ar:'هل تفهم أن إرسال هذا الاستبيان لا يعني الموافقة الطبية النهائية على إجراء الحجامة، وأن الجلسة قد تُؤجل أو تُلغى لأسباب تتعلق بسلامتك؟',en:'Do you understand that sending this questionnaire is not final medical approval for hijama, and that the session may be postponed or cancelled for your safety?'}
  ]}
 ];
+
+/* ---------- Hindi & Urdu ---------- */
+var TR={
+ L:{y:['हाँ','ہاں'],n:['नहीं','نہیں'],u:['पक्का नहीं','یقین نہیں'],uf:['पक्का नहीं','یقین نہیں'],na:['लागू नहीं','لاگو نہیں'],nev:['मैंने पहले हिजामा नहीं करवाया','میں نے پہلے حجامہ نہیں کروایا']},
+ s:{'01':['बुनियादी जानकारी','بنیادی معلومات'],'02':['स्वास्थ्य इतिहास','طبی تاریخ'],'03':['दवाएँ और पिछली मेडिकल प्रक्रियाएँ','ادویات اور سابقہ طبی عمل'],'04':['आपका पिछला अनुभव और गतिविधि','آپ کا سابقہ تجربہ اور سرگرمی'],'05':['अतिरिक्त जानकारी','اضافی تفصیلات'],'06':['स्वास्थ्य घोषणा','صحت کا اقرار']},
+ q:{
+ '1':['आपका पूरा नाम क्या है?','آپ کا پورا نام کیا ہے؟'],
+ '2':['आपकी जन्म तिथि क्या है?','آپ کی تاریخِ پیدائش کیا ہے؟'],
+ '3':['आप हिजामा क्यों करवाना चाहते हैं, इसका मुख्य कारण क्या है? क्या आपको कोई खास दर्द या स्वास्थ्य समस्या है?','آپ حجامہ کیوں کروانا چاہتے ہیں، اس کی بنیادی وجہ کیا ہے؟ کیا آپ کو کوئی خاص درد یا صحت کا مسئلہ ہے؟'],
+ '4':['क्या आपको कोई पुरानी बीमारी है, जैसे डायबिटीज़, हाई ब्लड प्रेशर, या दिल, किडनी या लिवर की बीमारी?','کیا آپ کو کوئی پرانی بیماری ہے، جیسے ذیابیطس، ہائی بلڈ پریشر، یا دل، گردے یا جگر کی بیماری؟'],
+ '5':['क्या आपको अभी कोई अस्थायी बीमारी है, जैसे बुखार, संक्रमण या बहुत ज़्यादा थकान?','کیا آپ کو اس وقت کوئی عارضی بیماری ہے، جیسے بخار، انفیکشن یا شدید تھکن؟'],
+ '6':['क्या कभी आपको एनीमिया, हीमोग्लोबिन की कमी या आयरन की कमी बताई गई है?','کیا کبھی آپ میں خون کی کمی (انیمیا)، ہیموگلوبن کی کمی یا آئرن کی کمی کی تشخیص ہوئی ہے؟'],
+ '7':['क्या आपको खून बहने या थक्का जमने की समस्या है, आसानी से नील पड़ जाते हैं, या खून बहना देर से रुकता है?','کیا آپ کو خون بہنے یا جمنے کا مسئلہ ہے، آسانی سے نیل پڑ جاتے ہیں، یا خون دیر سے رکتا ہے؟'],
+ '8':['क्या आपको लक्षणों के साथ लो ब्लड प्रेशर या दिल की धड़कन की अनियमितता है, या कभी खून निकलवाते या इंजेक्शन लगवाते समय बेहोश हुए हैं?','کیا آپ کو علامات کے ساتھ کم بلڈ پریشر یا دل کی دھڑکن کی بے قاعدگی ہے، یا کبھی خون نکلواتے یا انجکشن لگواتے وقت بے ہوش ہوئے ہیں؟'],
+ '9':['क्या आपकी इम्युनिटी कमज़ोर है, या कोई ऐसी स्थिति है जो संक्रमण से लड़ने या घाव भरने पर असर डालती है?','کیا آپ کی قوتِ مدافعت کمزور ہے، یا کوئی ایسی حالت ہے جو انفیکشن سے بچاؤ یا زخم بھرنے پر اثر ڈالتی ہے؟'],
+ '10':['जिन जगहों पर आप हिजामा करवाना चाहते हैं, क्या वहाँ अभी कोई घाव, जलने के घाव, संक्रमण या त्वचा रोग है?','جن جگہوں پر آپ حجامہ کروانا چاہتے ہیں، کیا وہاں اس وقت کوئی زخم، جلنے کے زخم، انفیکشن یا جلد کی بیماری ہے؟'],
+ '11':['क्या कभी आपके घाव देर से भरे हैं, या चोट के बाद उभरे हुए निशान बने हैं?','کیا کبھی آپ کے زخم دیر سے بھرے ہیں، یا چوٹ کے بعد ابھرے ہوئے نشان بنے ہیں؟'],
+ '12':['क्या आपको एंटीसेप्टिक, मेडिकल टेप, दस्ताने या किसी अन्य मेडिकल सामग्री से कोई ज्ञात एलर्जी है?','کیا آپ کو جراثیم کش مواد، طبی ٹیپ، دستانوں یا کسی اور طبی چیز سے کوئی معلوم الرجی ہے؟'],
+ '13':['क्या आपको नसों, मांसपेशियों या हड्डियों की कोई समस्या है, जैसे स्लिप डिस्क, सुन्नपन, मांसपेशियों की कमज़ोरी या जोड़ों का दर्द?','کیا آپ کو اعصاب، پٹھوں یا ہڈیوں کا کوئی مسئلہ ہے، جیسے سلپ ڈسک، سُن پن، پٹھوں کی کمزوری یا جوڑوں کا درد؟'],
+ '14':['महिला क्लाइंट्स के लिए: क्या आप प्रेग्नेंट हैं या प्रेग्नेंसी की संभावना है?','خواتین کلائنٹس کے لیے: کیا آپ حاملہ ہیں یا حمل کا امکان ہے؟'],
+ '15':['क्या आप अभी कोई दवा ले रहे हैं, या नियमित या अस्थायी रूप से इलाज के इंजेक्शन ले रहे हैं?','کیا آپ اس وقت کوئی دوا لے رہے ہیں، یا باقاعدہ یا عارضی طور پر علاج کے انجکشن لے رہے ہیں؟'],
+ '16':['क्या आप ऐसी दवाएँ लेते हैं जो खून बहने या थक्का जमने पर असर डालती हैं, जैसे एस्पिरिन, वारफेरिन, एपिक्साबान या क्लोपिडोग्रेल?','کیا آپ ایسی دوائیں لیتے ہیں جو خون بہنے یا جمنے پر اثر ڈالتی ہیں، جیسے اسپرین، وارفرین، ایپیکسابان یا کلوپیڈوگریل؟'],
+ '17':['क्या आप नियमित रूप से कॉर्टिसोन या इम्युनिटी दबाने वाली कोई दवा लेते हैं?','کیا آپ باقاعدگی سے کورٹیزون یا قوتِ مدافعت کم کرنے والی کوئی دوا لیتے ہیں؟'],
+ '18':['क्या पिछले तीन महीनों में आपने खून दान किया है, वेट कपिंग करवाई है, या काफ़ी मात्रा में खून बहा है?','کیا پچھلے تین مہینوں میں آپ نے خون کا عطیہ دیا ہے، ویٹ کپنگ کروائی ہے، یا خاصی مقدار میں خون ضائع ہوا ہے؟'],
+ '19':['क्या हाल ही में आपका कोई ऑपरेशन हुआ है, या सर्जरी का कोई घाव है जो पूरी तरह नहीं भरा?','کیا حال ہی میں آپ کا کوئی آپریشن ہوا ہے، یا سرجری کا کوئی زخم ہے جو مکمل طور پر نہیں بھرا؟'],
+ '20':['क्या आपने पहले कभी वेट कपिंग करवाई है?','کیا آپ نے پہلے کبھی ویٹ کپنگ کروائی ہے؟'],
+ '21':['अगर आपने पहले हिजामा करवाया है, तो क्या कोई परेशानी हुई थी, जैसे खून बहना, बेहोशी, संक्रमण या तेज़ दर्द?','اگر آپ نے پہلے حجامہ کروایا ہے تو کیا کوئی پیچیدگی ہوئی تھی، جیسے خون بہنا، بے ہوشی، انفیکشن یا شدید درد؟'],
+ '22':['क्या आप नियमित रूप से एक्सरसाइज़ करते हैं?','کیا آپ باقاعدگی سے ورزش کرتے ہیں؟'],
+ '23':['क्या आपने पिछले 24 घंटों में भारी एक्सरसाइज़ की है, या अभी शरीर में पानी की कमी या बहुत थकान है?','کیا آپ نے پچھلے 24 گھنٹوں میں سخت ورزش کی ہے، یا اس وقت جسم میں پانی کی کمی یا شدید تھکن ہے؟'],
+ '24':['अगर आपने किसी स्वास्थ्य सवाल का जवाब «हाँ» या «पक्का नहीं» दिया है, तो कृपया सवाल का नंबर लिखें और पूरी जानकारी दें, ज़रूरत हो तो दवाओं के नाम और डोज़ भी।','اگر آپ نے کسی صحت کے سوال کا جواب «ہاں» یا «یقین نہیں» دیا ہے تو براہِ کرم سوال کا نمبر لکھیں اور تفصیل بتائیں، ضرورت ہو تو دواؤں کے نام اور خوراک بھی۔'],
+ '25':['क्या कोई और स्वास्थ्य जानकारी है जो आपको लगता है कि सेशन से पहले प्रैक्टिशनर को बताना ज़रूरी है?','کیا کوئی اور صحت کی معلومات ہے جو آپ کے خیال میں سیشن سے پہلے پریکٹیشنر کو بتانا ضروری ہے؟'],
+ '26':['क्या आप पुष्टि करते हैं कि आपकी दी गई जानकारी आपकी जानकारी के अनुसार सही और पूरी है, और सेशन से पहले अपनी सेहत में किसी भी बदलाव के बारे में प्रैक्टिशनर को बताएँगे?','کیا آپ تصدیق کرتے ہیں کہ آپ کی دی گئی معلومات آپ کے علم کے مطابق درست اور مکمل ہیں، اور سیشن سے پہلے اپنی صحت میں کسی بھی تبدیلی کے بارے میں پریکٹیشنر کو بتائیں گے؟'],
+ '27':['क्या आप समझते हैं कि यह प्रश्नावली भेजने का मतलब हिजामा के लिए अंतिम मेडिकल मंज़ूरी नहीं है, और आपकी सुरक्षा के लिए सेशन टाला या रद्द किया जा सकता है?','کیا آپ سمجھتے ہیں کہ یہ سوالنامہ بھیجنے کا مطلب حجامہ کی حتمی طبی منظوری نہیں، اور آپ کی حفاظت کے لیے سیشن مؤخر یا منسوخ کیا جا سکتا ہے؟']
+ }
+};
+Object.keys(TR.L).forEach(function(k){ L[k].hi=TR.L[k][0]; L[k].ur=TR.L[k][1]; });
+S.forEach(function(s){ s.hi=TR.s[s.n][0]; s.ur=TR.s[s.n][1]; s.qs.forEach(function(q){ q.hi=TR.q[q.id][0]; q.ur=TR.q[q.id][1]; }); });
 var Q={}; S.forEach(function(s){ s.qs.forEach(function(q){ Q[q.id]=q; }); });
 var ORDER=Object.keys(Q).sort(function(a,b){return a-b;});
 
@@ -312,16 +356,16 @@ function el(tag,attrs,kids){
   (kids||[]).forEach(function(c){ if(c) e.appendChild(c); });
   return e;
 }
-function bi(ar,en){ return [el('span',{'data-l':'ar',text:ar}),el('span',{'data-l':'en',text:en})]; }
+function bi(ar,en,hi,ur){ return [el('span',{'data-l':'ar',text:ar}),el('span',{'data-l':'en',text:en}),el('span',{'data-l':'hi',text:hi||en}),el('span',{'data-l':'ur',text:ur||en})]; }
 
 /* ---------- language ---------- */
 var lang='ar';
 function setLang(l){
-  lang = l==='en' ? 'en':'ar';
+  lang = ['ar','en','hi','ur'].indexOf(l)>-1 ? l : 'ar';
   document.documentElement.lang=lang;
-  document.documentElement.dir= lang==='ar'?'rtl':'ltr';
+  document.documentElement.dir= (lang==='ar'||lang==='ur')?'rtl':'ltr';
   document.querySelectorAll('.langs button').forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-set')===lang?'true':'false'); });
-  document.title = lang==='ar' ? 'استبيان التقييم الصحي قبل الحجامة الرطبة · كابتن أحمد ماهر' : 'Health Assessment Before Wet Cupping · Coach Ahmed Maher';
+  document.title = ({ar:'استبيان التقييم الصحي قبل الحجامة الرطبة · كابتن أحمد ماهر',en:'Health Assessment Before Wet Cupping · Coach Ahmed Maher',hi:'वेट कपिंग से पहले स्वास्थ्य मूल्यांकन · कोच अहमद माहेर',ur:'ویٹ کپنگ سے پہلے صحت کا جائزہ · کوچ احمد ماہر'})[lang];
 }
 var lb=document.querySelector('.lang-btn'), lm=document.getElementById('langMenu');
 function openMenu(o){ lm.hidden=!o; lb.setAttribute('aria-expanded',o?'true':'false'); }
@@ -403,7 +447,7 @@ if(hash.indexOf('#r=')===0){
   rep.appendChild(el('div',{'class':'r-sum'},[
     el('div',null,[el('span',{text:'الاسم'}),el('b',{text:A['1']||'—'})]),
     el('div',null,[el('span',{text:'تاريخ الميلاد'}),el('b',{text:(fmtDate(A['2'])||'—')+(age!==''?'  ('+age+' سنة)':'')})]),
-    el('div',null,[el('span',{text:'لغة الاستبيان'}),el('b',{text:data.l==='en'?'English':'العربية'})]),
+    el('div',null,[el('span',{text:'لغة الاستبيان'}),el('b',{text:({en:'English',hi:'हिन्दी',ur:'اردو'})[data.l]||'العربية'})]),
     el('div',null,[el('span',{text:'إجابات تحتاج مراجعة'}),el('b',{text:String(fl.length)})])
   ]));
   rep.appendChild(fl.length
@@ -465,31 +509,31 @@ if(hash.indexOf('#r=')===0){
 var host=document.getElementById('sections');
 S.forEach(function(s){
   var sec=el('section',{'class':'sec'},[
-    el('div',{'class':'sec-head'},[el('div',{'class':'num',text:s.n}),el('div',null,[el('h2',null,bi(s.ar,s.en)),el('div',{'class':'en',text:s.en})])])
+    el('div',{'class':'sec-head'},[el('div',{'class':'num',text:s.n}),el('div',null,[el('h2',null,bi(s.ar,s.en,s.hi,s.ur)),el('div',{'class':'en',text:s.en})])])
   ]);
   s.qs.forEach(function(q){
     var box=el('div',{'class':'q',id:'q'+q.id,'data-q':q.id});
     var num=el('span',{'class':'qn',text:q.id});
     if(q.o){
       var fs=el('fieldset');
-      var lg=el('legend',null,[num].concat(bi(q.ar,q.en)));
+      var lg=el('legend',null,[num].concat(bi(q.ar,q.en,q.hi,q.ur)));
       fs.appendChild(lg);
       var opts=el('div',{'class':'opts'});
       q.o.forEach(function(code){
         var inp=el('input',{type:'radio',name:'q'+q.id,value:code});
-        opts.appendChild(el('label',{'class':'opt'},[inp,el('span',null,bi(L[code].ar,L[code].en))]));
+        opts.appendChild(el('label',{'class':'opt'},[inp,el('span',null,bi(L[code].ar,L[code].en,L[code].hi,L[code].ur))]));
       });
       fs.appendChild(opts); box.appendChild(fs);
       if(q.detail){
         var d=el('div',{'class':'detail',id:'d25',hidden:''},[
-          el('label',{'class':'ql','for':'f25d'},bi('يُرجى توضيح التفاصيل:','Please explain the details:')),
+          el('label',{'class':'ql','for':'f25d'},bi('يُرجى توضيح التفاصيل:','Please explain the details:','कृपया पूरी जानकारी दें:','براہِ کرم تفصیل بتائیں:')),
           el('textarea',{'class':'field',id:'f25d',name:'q25d',maxlength:'400',rows:'3'})
         ]);
         box.appendChild(d);
       }
     }else{
       var fid='f'+q.id;
-      box.appendChild(el('label',{'class':'ql','for':fid},[num].concat(bi(q.ar,q.en))));
+      box.appendChild(el('label',{'class':'ql','for':fid},[num].concat(bi(q.ar,q.en,q.hi,q.ur))));
       var f;
       if(q.t==='area') f=el('textarea',{'class':'field',id:fid,name:'q'+q.id,maxlength:String(q.max||400),rows:'4'});
       else if(q.t==='date'){ f=el('input',{'class':'field',id:fid,name:'q'+q.id,type:'date',min:'1920-01-01',max:new Date().toISOString().slice(0,10)}); }
@@ -519,6 +563,8 @@ function refresh(){
     n24.textContent='';
     n24.appendChild(el('span',{'data-l':'ar',text:'مطلوب: لأنك أجبت بـ«نعم» أو «غير متأكد» على السؤال: '+fl.join('، ')}));
     n24.appendChild(el('span',{'data-l':'en',text:'Required: you answered “Yes” or “Not sure” to question: '+fl.join(', ')}));
+    n24.appendChild(el('span',{'data-l':'hi',text:'ज़रूरी: क्योंकि आपने इन सवालों का जवाब «हाँ» या «पक्का नहीं» दिया है: '+fl.join(', ')}));
+    n24.appendChild(el('span',{'data-l':'ur',text:'لازمی: کیونکہ آپ نے ان سوالات کا جواب «ہاں» یا «یقین نہیں» دیا ہے: '+fl.join('، ')}));
   }else n24.hidden=true;
   document.getElementById('d25').hidden = a['25']!=='y';
   /* Q24 only counts when it is required */
@@ -543,10 +589,10 @@ form.addEventListener('input',function(e){
 });
 refresh();
 
-function markErr(id,ar,en){
+function markErr(id,ar,en,hi,ur){
   var box=document.getElementById('q'+id); if(!box) return;
   box.classList.add('err');
-  if(!box.querySelector('.emsg')) box.appendChild(el('p',{'class':'emsg'},bi(ar,en)));
+  if(!box.querySelector('.emsg')) box.appendChild(el('p',{'class':'emsg'},bi(ar,en,hi,ur)));
 }
 
 form.addEventListener('submit',function(e){
@@ -556,18 +602,18 @@ form.addEventListener('submit',function(e){
   var st=refresh(), a=st.a, fl=st.fl, allFl=flagged(a), missing=[], blocked=false;
   ORDER.forEach(function(id){
     var q=Q[id];
-    if(id==='24'){ if(fl.length && !a['24']){ missing.push(id); markErr(id,'يرجى توضيح تفاصيل الإجابات المذكورة.','Please explain the answers listed.'); } return; }
-    if(!a[id]){ missing.push(id); markErr(id,'يرجى الإجابة على هذا السؤال.','Please answer this question.'); return; }
-    if(q.must && a[id]!==q.must){ blocked=true; markErr(id,'لا يمكن إرسال الاستبيان بدون الموافقة على هذا الإقرار.','The questionnaire cannot be sent without agreeing to this declaration.'); }
+    if(id==='24'){ if(fl.length && !a['24']){ missing.push(id); markErr(id,'يرجى توضيح تفاصيل الإجابات المذكورة.','Please explain the answers listed.','कृपया ऊपर बताए गए जवाबों की जानकारी दें।','براہِ کرم مذکورہ جوابات کی تفصیل بتائیں۔'); } return; }
+    if(!a[id]){ missing.push(id); markErr(id,'يرجى الإجابة على هذا السؤال.','Please answer this question.','कृपया इस सवाल का जवाब दें।','براہِ کرم اس سوال کا جواب دیں۔'); return; }
+    if(q.must && a[id]!==q.must){ blocked=true; markErr(id,'لا يمكن إرسال الاستبيان بدون الموافقة على هذا الإقرار.','The questionnaire cannot be sent without agreeing to this declaration.','इस घोषणा से सहमत हुए बिना प्रश्नावली नहीं भेजी जा सकती।','اس اقرار سے اتفاق کیے بغیر سوالنامہ نہیں بھیجا جا سکتا۔'); }
   });
-  if(a['25']==='y' && !a['25d']){ missing.push('25'); markErr('25','يرجى توضيح التفاصيل.','Please explain the details.'); }
+  if(a['25']==='y' && !a['25d']){ missing.push('25'); markErr('25','يرجى توضيح التفاصيل.','Please explain the details.','कृपया पूरी जानकारी दें।','براہِ کرم تفصیل بتائیں۔'); }
   var ack=document.getElementById('ack').checked;
   if(!ack) document.getElementById('ackLabel').classList.add('err');
   if(missing.length || blocked || !ack){
     var parts=[];
-    if(missing.length) parts.push(bi('يوجد '+missing.length+' سؤال لم تتم الإجابة عليه: '+missing.join('، '),missing.length+' question(s) still need an answer: '+missing.join(', ')));
-    if(blocked) parts.push(bi('يجب الموافقة على الإقرار الصحي (السؤالان 26 و27) لإرسال الاستبيان.','You must agree to the health declaration (questions 26 and 27) to send the questionnaire.'));
-    if(!ack) parts.push(bi('يرجى تأكيد الإقرار بالمسؤولية قبل الإرسال.','Please confirm the responsibility statement before sending.'));
+    if(missing.length) parts.push(bi('يوجد '+missing.length+' سؤال لم تتم الإجابة عليه: '+missing.join('، '),missing.length+' question(s) still need an answer: '+missing.join(', '),missing.length+' सवालों के जवाब अभी बाकी हैं: '+missing.join(', '),missing.length+' سوالات کے جواب ابھی باقی ہیں: '+missing.join('، ')));
+    if(blocked) parts.push(bi('يجب الموافقة على الإقرار الصحي (السؤالان 26 و27) لإرسال الاستبيان.','You must agree to the health declaration (questions 26 and 27) to send the questionnaire.','प्रश्नावली भेजने के लिए स्वास्थ्य घोषणा (सवाल 26 और 27) से सहमत होना ज़रूरी है।','سوالنامہ بھیجنے کے لیے صحت کے اقرار (سوال 26 اور 27) سے اتفاق ضروری ہے۔'));
+    if(!ack) parts.push(bi('يرجى تأكيد الإقرار بالمسؤولية قبل الإرسال.','Please confirm the responsibility statement before sending.','भेजने से पहले कृपया ज़िम्मेदारी की पुष्टि करें।','بھیجنے سے پہلے براہِ کرم ذمہ داری کی تصدیق کریں۔'));
     parts.forEach(function(p){ errBox.appendChild(el('div',null,p)); });
     errBox.hidden=false;
     var first=form.querySelector('.q.err')||document.getElementById('ackLabel');
